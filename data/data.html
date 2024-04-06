@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Data Management</title>
+    <link rel="stylesheet" href="data.css" />
+    <link rel="icon" href="imgs/Icon-1-1 (1).png" />
+  </head>
+  <body>
+    <!--..........................................................................Start Nav Bar And Main Bodey ..................................................................-->
+    <br />
+    <br />
+    <a href="/home/karim/Documents/Front End/Senior/BesTrip/index/index.html">
+      <button class="back-button">Back To Home</button>
+    </a>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 style="color: #ccc">Trip Data Management</h1>
+    <p style="color: beige; text-align: center">
+      Type in the form below to add or change a new trip's data:
+    </p>
+    <form id="new-trip-form">
+      <label for="trip-name" style="text-align: center; color: #ffff"
+        ><strong>Enter Trip Name</strong></label
+      >
+      <input type="text" id="trip-name" name="trip-name" required />
+      <button type="submit" style="text-align: center; color: #ccc">
+        <strong>Add New Trip</strong>
+      </button>
+    </form>
+    <form id="update-price-form">
+      <label for="new-price" style="text-align: center; color: #ffff"
+        ><strong>New Price</strong></label
+      >
+      <input type="number" id="new-price" name="new-price" required />
+      <button type="submit" style="text-align: center; color: #ccc">
+        <strong>Update Price</strong>
+      </button>
+    </form>
+    <form id="delete-trip-form">
+      <label for="trip-index-del" style="text-align: center; color: #ffff"
+        ><strong>Trip Number</strong></label
+      >
+      <input type="number" id="trip-index-del" name="trip-index-del" required />
+      <button type="submit" style="text-align: center; color: #ccc">
+        <strong>Delete Trip</strong>
+      </button>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="trip-list">
+      <ul id="new-trips"></ul>
+    </div>
+    <script>
+      document
+        .getElementById("new-trip-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const tripName = document.getElementById("trip-name").value;
+          const tripPrice = 200; // Initialize price with 0
+          const list = document.querySelector("#new-trips");
+          const listItem = document.createElement("li");
+          const tripIndex = document.querySelectorAll("#new-trips li").length;
+          listItem.textContent = `${tripIndex}. ${tripName} - $${tripPrice.toFixed(
+            2
+          )}`;
+          list.appendChild(listItem);
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

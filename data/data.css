@@ -1,0 +1,90 @@
+/*...........................................buttons...........................................*/
+button.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+button.back-button:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000000;
+}
+/*...........................................Body...........................................*/
+body {
+  background: linear-gradient(
+    to right,
+    #19191a,
+    #21272c,
+    rgb(42, 42, 49),
+    rgb(79, 81, 100)
+  );
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #00070a;
+  border-radius: 4px;
+  background-color: #647274;
+  box-shadow: 0 15px 24px rgba(175, 174, 174, 0.664);
+}
+form label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+form input[type="text"],
+form input[type="number"] {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #3a6b86;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button[type="submit"] {
+  width: 100%;
+  padding: 0.7em;
+  background-color: #0e3f028e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form button[type="submit"]:hover {
+  background-color: #3a6b86;
+  border: rgb(2, 2, 15);
+}
+#trip-list {
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #3a6b86;
+  border-radius: 4px;
+  background-color: #d3d9dd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#trip-list ul {
+  list-style: none;
+  padding: 0;
+}
+#trip-list li {
+  background-color: #f7f7f7;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 4px;
+}
+#trip-list li:hover {
+  background-color: #bac4c7;
+}
+/* .................................................................................. End Body .........................................................*/

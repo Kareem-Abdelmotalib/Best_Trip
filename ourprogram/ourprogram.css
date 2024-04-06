@@ -1,0 +1,150 @@
+body{ display: flex; flex-wrap: wrap; justify-content: center; background: grey; padding-top: 20px;
+    background-image: url("https://pbs.twimg.com/media/E3_guXtX0AUihWN.jpg");
+    
+    /*   https://media.istockphoto.com/vectors/travel-concept-seamless-pattern-abstract-airplane-routes-travel-and-vector-id936346770?k=20&m=936346770&s=612x612&w=0&h=pNoiIGyr4aF7H_gmwI38xlKT4oOCouCYj8Tw0WaKYhI= */
+    
+    }
+    
+    .card{margin-top: 50px;
+    background: #17141d;
+    background: white;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 210px 80px;
+    grid-template-areas: "image" "text" "bottom";
+    font-family: roboto;
+    border-radius: 18px;
+    //box-shadow: -1rem 0 3rem #000;
+      box-shadow: -1rem 0 2rem #000;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.6s ease;
+      //color: white;
+      
+    }
+    
+    .card-img{
+      grid-area: image;
+      background: linear-gradient(#fff0 0%, #fff0, 70%, #1d1d1d 100%), url("https://livingcities.org/wp-content/uploads/2021/04/AustinTX.jpg");
+      background-size: cover;
+     //border-radius: 0 0 60% 60% /0 0 20% 20%;
+      
+    }
+    
+    .card-discription{
+      grid-area: text;
+      font-family: Helvetica;
+      margin-top: -10px;
+    }
+    
+    .card-discription > p{
+    margin: 15px; margin-top: -10px;
+    }
+    
+    #visit-header, #visit-state{
+      font-family: arial;
+      text-transform: uppercase;
+    }
+    
+    #visit-state{font-size: 18px;
+    margin-top: -18px; margin-bottom: 20px;
+     color: #aaa;
+    }
+    
+    #booknowbtn{
+    // background: #e9443c;
+      background: #54c3dd;
+      background: 
+    #38596c;
+       //background:
+      linear-gradient(#f2eecb, #cfb997);
+     grid-area: bottom;
+     border: none;
+     font-size: 20px;
+     color: white;
+     margin-top: 30px;
+    }
+    
+    #booknowbtn:hover{cursor: pointer; background: #54c3dd;
+    background: #029be6;
+      background: #51a7e1; 
+      background: #2e709a;
+    }
+    
+    .card:hover{
+      transform: translateY(-1rem);
+    }
+    
+    .card:hover~.card{
+      transform: translateX(130px);
+    }
+    
+    .card:not(:first-child){
+      margin-left: -130px;
+    }
+    
+    
+    
+    /* LOCATION IMG */
+    /* #sb{background-image: url("https://miro.medium.com/max/1000/1*HXChk_VSESSUYNR3VgCo_Q.jpeg")} */
+    
+    
+    #sb{
+      background-position: bottom;
+      background-image: url("https://raw.githubusercontent.com/kriskosta/siteimages/main/smallsbpic.jpg")}
+    
+    /* //https://prod-virtuoso.dotcmscloud.com/dA/b3bd129b-efda-486b-8290-ccb35cd0f167/previewImage/MissionSantaBarbara_hero.jpg */
+    #yosemite{background-image: url("https://discovery.sndimg.com/content/dam/images/discovery/fullset/2022/5/18/GettyImages-1353388525.jpg.rend.hgtvcom.616.347.suffix/1652924149143.jpeg")}
+    
+    #marin{background-image: url("https://raw.githubusercontent.com/kriskosta/siteimages/main/smallFullSizeR.jpg")}
+    
+    a{text-decoration: none;
+    color: white;}
+    
+    /* RGB */
+    
+    .rgb::after {
+      content:"";
+      background: linear-gradient(45deg,
+      #ff0000 0%, 
+      #ff9a00 10%,
+      #d0de21 20%,
+      #4fdc4a 30%, 
+      #3fdad8 40%,
+      #2fc9e2 50%, 
+      #1c7fee 60%, 
+      #5f15f2 70%, 
+      #ba0cf8 80%, 
+      #fb07d9 90%, 
+      #ff0000 100%  )
+      repeat 0% 0% / 300% 100%;
+      position: absolute;
+      inset: -3px;
+    } 
+    
+    @keyframes rgb {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    
+    .rgb::after {
+    ...
+      border-radius: 16px;
+      filter: blur(8px);
+      transform: translateZ(-1px); /*or z-index */
+      animation: rgb 6s linear infinite;
+    }
+    
+    
+    @media(max-width: 900px){
+      body{height: auto;}
+      .card{width: 160px; height: 300px;}
+      .card{font-size: 10px;}
+      .card-img{background-size: cover; width:160px; height: 110px; margin-bottom: 0px;}
+      .card-discription{margin-top: -100px; width:160px;}
+      #visit-header{margin: 2px; margin-bottom: 20px;}
+      #visit-state{margin-bottom: 10px;}
+    }
+    /*...................................................Buttun,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+    
