@@ -3,75 +3,263 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trip Data Management</title>
     <link rel="stylesheet" href="data.css" />
-    <link rel="icon" href="imgs/Icon-1-1 (1).png" />
+    <title>Admin Side</title>
   </head>
   <body>
-    <!--..........................................................................Start Nav Bar And Main Bodey ..................................................................-->
-    <br />
-    <br />
-    <a href="../index.html">
-      <button class="back-button">Back To Home</button>
-    </a>
-    <br />
-    <br />
-    <br />
-    <br />
-    <h1 style="color: #ccc">Trip Data Management</h1>
-    <p style="color: beige; text-align: center">
-      Type in the form below to add or change a new trip's data:
-    </p>
-    <form id="new-trip-form">
-      <label for="trip-name" style="text-align: center; color: #ffff"
-        ><strong>Enter Trip Name</strong></label
-      >
-      <input type="text" id="trip-name" name="trip-name" required />
-      <button type="submit" style="text-align: center; color: #ccc">
-        <strong>Add New Trip</strong>
-      </button>
-    </form>
-    <form id="update-price-form">
-      <label for="new-price" style="text-align: center; color: #ffff"
-        ><strong>New Price</strong></label
-      >
-      <input type="number" id="new-price" name="new-price" required />
-      <button type="submit" style="text-align: center; color: #ccc">
-        <strong>Update Price</strong>
-      </button>
-    </form>
-    <form id="delete-trip-form">
-      <label for="trip-index-del" style="text-align: center; color: #ffff"
-        ><strong>Trip Number</strong></label
-      >
-      <input type="number" id="trip-index-del" name="trip-index-del" required />
-      <button type="submit" style="text-align: center; color: #ccc">
-        <strong>Delete Trip</strong>
-      </button>
-    </form>
-    <br />
-    <br />
-    <br />
-    <br />
-    <div id="trip-list">
-      <ul id="new-trips"></ul>
+    <main class="container">
+      <div class="menu">
+        <div class="avatar">
+          <img class="thumb" src="IMG_20240217_195537.jpg" width="60" />
+          <span class="name">@Kareem-Abdelmotalib</span>
+        </div>
+        <nav class="primary">
+          <a href="#" class="menu-item active">
+            <span class="iconoir-report-columns"></span>
+            <span class="desc">DashBoard</span>
+          </a>
+          <a href="#" class="menu-item">
+            <span class="iconoir-google-docs"></span>
+            <span class="desc">Reports</span>
+          </a>
+          <a href="#" class="menu-item">
+            <span class="iconoir-table"></span>
+            <span class="desc">Stats</span>
+          </a>
+          <a href="#" class="menu-item">
+            <span class="iconoir-bag"></span>
+            <span class="desc">Cart</span>
+          </a>
+          <a href="#" class="menu-item">
+            <span class="iconoir-user"></span>
+            <span class="desc">Clients</span>
+          </a>
+          <a href="#" class="menu-item">
+            <span class="iconoir-leaderboard"></span>
+            <span class="desc">Analytics</span>
+          </a>
+          <a href="#" class="menu-item">
+            <span class="iconoir-settings"></span>
+            <span class="desc">Settings</span>
+          </a>
+        </nav>
+        <span class="expander iconoir-arrow-right"></span>
+      </div>
+      <div class="topbar">
+        <h1 class="current">DashBoard</h1>
+        <span class="search">
+          <label><span class="iconoir-search"></span></label>
+          <input class="bar" type="text" placeholder="Search..." />
+        </span>
+        <nav>
+          <a href="#" class="menu-item">Orders</a>
+          <a href="#" class="menu-item">Clients</a>
+          <a href="#" class="menu-item">Sections</a>
+          <a href="#" class="menu-item">Products</a>
+        </nav>
+      </div>
+      <div class="dashboard">
+        <div class="cardcolumn">
+          <div class="card">
+            <header>
+              <a class="title" href="#"></a>
+              <span class="iconoir-more-vert"></span>
+            </header>
+            <div class="content"></div>
+            <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
+          </div>
+          <div class="card">
+            <header>
+              <a class="title" href="#"></a>
+              <span class="iconoir-more-vert"></span>
+            </header>
+            <div class="content"></div>
+            <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cardcolumn">
+          <div class="card">
+            <header>
+              <a class="title" href="#"></a>
+              <span class="iconoir-more-vert"></span>
+            </header>
+            <div class="content"></div>
+            <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
+          </div>
+          <div class="card">
+            <header>
+              <a class="title" href="#"></a>
+              <span class="iconoir-more-vert"></span>
+            </header>
+            <div class="content"></div>
+            <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
+          </div>
+        </div>
+        <div class="cardcolumn">
+          <div class="card">
+            <header>
+              <a class="title" href="#"></a>
+              <span class="iconoir-more-vert"></span>
+            </header>
+            <div class="content"></div>
+            <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
+          </div>
+          <div class="card">
+            <header>
+              <a class="title" href="#"></a>
+              <span class="iconoir-more-vert"></span>
+            </header>
+            <div class="content"></div>
+            <div class="meta">
+              <span class="iconoir-pin"></span>
+              <span class="iconoir-eye-off"></span>
+              <span class="iconoir-share-ios"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="card weather">
+          <img
+            class="condition"
+            src="https://user-images.githubusercontent.com/30212452/203724734-5f748507-7ae4-49f9-89f8-7fce3112cd95.png"
+          />
+          <div class="content"></div>
+          <div class="meta">
+            <span class="location">
+              <span class="iconoir-pin-alt"></span>
+              Arish , Egypt
+            </span>
+            <div class="datetime">
+              <span class="iconoir-calendar"></span>
+              <span class="date">7 Apr, 2024</span>
+              <span class="time">5:01</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <header>Schedule</header>
+          <div class="content">
+            <ul>
+              <li>(15:30) Deliver the project to client</li>
+              <li>(18:00) Meet Mike @ My Team Developers</li>
+              <li>(19:30) Update The System</li>
+              <li>(22:00) Code Review</li>
+              <li>(23:30) Contact With The Client @ Ahmed120</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="video">
+      <video
+        src="https://user-images.githubusercontent.com/30212452/203724691-9e93bf50-df02-4034-9743-dfe32d18bf58.mp4"
+        muted
+        playsinline
+        autoplay
+        loop
+      ></video>
     </div>
     <script>
-      document
-        .getElementById("new-trip-form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const tripName = document.getElementById("trip-name").value;
-          const tripPrice = 200; // Initialize price with 0
-          const list = document.querySelector("#new-trips");
-          const listItem = document.createElement("li");
-          const tripIndex = document.querySelectorAll("#new-trips li").length;
-          listItem.textContent = `${tripIndex}. ${tripName} - $${tripPrice.toFixed(
-            2
-          )}`;
-          list.appendChild(listItem);
-          this.reset();
+      const container = document.querySelector("main");
+      const search = document.querySelector(".search label");
+      const expander = document.querySelector("main .menu .expander");
+      const current = document.querySelector(".current");
+      const menuItems = document.querySelectorAll(
+        "main .menu .primary .menu-item"
+      );
+      const mainCards = document.querySelectorAll("main .dashboard .card");
+      const weatherContent = document.querySelector(".side .weather .content");
+      const date = document.querySelector("main .side .date");
+      const time = document.querySelector("main .side .time");
+
+      // Fix :active touch on mobiles
+      document.addEventListener("touchstart", () => {}, true);
+
+      // Search Expand
+      search.addEventListener("click", () =>
+        container.classList.toggle("search")
+      );
+
+      // Main Menu
+      menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          current.innerText = item.querySelector(".desc").textContent;
+          menuItems.forEach((item) => item.classList.remove("active"));
+          item.classList.add("active");
         });
+      });
+
+      // Set Date, Time
+      const today = new Date();
+      const formatZero = (value) => (value < 10 ? "0" + value : value);
+      const months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      date.innerText = `${today.getDate()} ${
+        months[today.getMonth()]
+      }, ${today.getFullYear()}`;
+      time.innerText = `${today.getHours()}:${formatZero(today.getMinutes())}`;
+
+      // Populate News
+      const dummyData = () => {
+        mainCards.forEach((card, i) => {
+          card.querySelector(".title").innerText = "BesTrip sit.";
+          card.querySelector(".content").innerText =
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut nibh eget felis tincidunt porta. Quisque malesuada, eros vitae convallis semper, nisi ligula bibendum enim, vitae rhoncus metus nunc id lectus. Curabitur in aliquam felis, vel ultrices erat. Sed ut nunc euismod, sagittis lectus sit amet, malesuada justo. Quisque sit amet urna in nunc consectetur ultricies. Ut eget tempor enim, eu vehicula ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. If you have admin access, please delete this dummy text and replace it with relevant information.".slice(
+              0,
+              Math.round(Math.random() * -200)
+            );
+        });
+      };
+
+      // Weather Data for Athens from open-meteo.com
+      const weatherData = async () => {
+        const weather =
+          "https://api.open-meteo.com/v1/forecast?latitude=37.9792&longitude=23.7166&hourly=temperature_2m&current_weather=true";
+        const res = await fetch(weather);
+        const data = await res.json();
+
+        if (data) {
+          weatherContent.innerHTML = `
+    ${data.current_weather.temperature}<span class='celsius'>°C</span>
+    `;
+        }
+      };
+
+      dummyData();
+      weatherData();
     </script>
   </body>
 </html>
