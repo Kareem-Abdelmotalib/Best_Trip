@@ -89,7 +89,7 @@ header {
     rgba(13, 15, 16, 0.5),
     rgba(45, 92, 132, 0.5)
   ),
-    url("./img.css/pexels-ali-kazal-10762604.jpg");
+    url("img/pexels-ali-kazal-10762604.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -173,7 +173,7 @@ header .section__container {
     rgba(13, 15, 16, 0.5),
       rgba(35, 71, 103, 0.5)
     ),
-    url("./img.css/pexels-elina-sazonova-4275986.jpg");
+    url("img/pexels-elina-sazonova-4275986.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
