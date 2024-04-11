@@ -159,35 +159,6 @@
         />
       </g>
     </svg>
-    <br>
-    <section>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-
-    <div class="wrapper">
-      <div class="hero">
-        <h1 class="hero__heading">We Are BesTrip Company!</h1>
-      </div>
-
-      <div class="hero hero--secondary" aria-hidden="true" data-hero>
-        <p class="hero__heading">A Compony For Hiking Mountains!</p>
-      </div>
-    </div>
-    <script>
-      const hero = document.querySelector("[data-hero]");
-
-      window.addEventListener("mousemove", (e) => {
-        const { clientX, clientY } = e;
-        const x = Math.round((clientX / window.innerWidth) * 100);
-        const y = Math.round((clientY / window.innerHeight) * 100);
-
-        gsap.to(hero, {
-          "--x": `${x}%`,
-          "--y": `${y}%`,
-          duration: 0.3,
-          ease: "sine.out",
-        });
-      });
-    </script>
-      </section>
+   
   </body>
 </html>
