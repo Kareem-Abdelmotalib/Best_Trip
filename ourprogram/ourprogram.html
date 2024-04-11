@@ -3,101 +3,278 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="ourprogram.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="../index/img/Icon-1-1 (1).png" />
+    ]
     <title>Our Program</title>
   </head>
   <body>
-    <div>
-      <a href="../index.html"
-        ><img src="../index/img/logo113.png" alt="" id="logo"
-      /></a>
+    <script>
+      const canvas = document.getElementById("particleCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Initial canvas size
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      let particles = [];
+      let particleCount = calculateParticleCount();
+
+      class Particle {
+        constructor() {
+          this.reset();
+          this.y = Math.random() * canvas.height;
+          this.fadeDelay = Math.random() * 600 + 100;
+          this.fadeStart = Date.now() + this.fadeDelay;
+          this.fadingOut = false;
+        }
+
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.speed = Math.random() / 5 + 0.1;
+          this.opacity = 1;
+          this.fadeDelay = Math.random() * 600 + 100;
+          this.fadeStart = Date.now() + this.fadeDelay;
+          this.fadingOut = false;
+        }
+
+        update() {
+          this.y -= this.speed;
+          if (this.y < 0) {
+            this.reset();
+          }
+
+          if (!this.fadingOut && Date.now() > this.fadeStart) {
+            this.fadingOut = true;
+          }
+
+          if (this.fadingOut) {
+            this.opacity -= 0.008;
+            if (this.opacity <= 0) {
+              this.reset();
+            }
+          }
+        }
+
+        draw() {
+          ctx.fillStyle = `rgba(${255 - (Math.random() * 255) / 2}, 255, 255, ${
+            this.opacity
+          })`;
+          ctx.fillRect(this.x, this.y, 0.4, Math.random() * 2 + 1);
+        }
+      }
+
+      function initParticles() {
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+          particles.push(new Particle());
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((particle) => {
+          particle.update();
+          particle.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+
+      function calculateParticleCount() {
+        return Math.floor((canvas.width * canvas.height) / 6000);
+      }
+
+      function onResize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        particleCount = calculateParticleCount();
+        initParticles();
+      }
+
+      window.addEventListener("resize", onResize);
+
+      initParticles();
+      animate();
+    </script>
+    <!-- design inspired by https://www.authkit.com/ -->
+    <div class="header">
+      <h2>
+        <a href="../index.html" target="_blank" rel="noopener noreferrer"
+          >Home</a
+        >
+      </h2>
+      <div
+        class="mid-spot"
+        onclick="document.body.classList.toggle('gold');"
+      ></div>
+      <a href="../Contact_Us/Contact_Us.html">
+        <button class="contact-btn">
+          <span class="glow"></span>
+          <span class="contact-btn-content">Contact Us</span>
+        </button></a
+      >
+
+      <div class="spotlight">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="accent-lines">
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="heroSubP">
+      <p>Our Program</p>
+    </div>
+    <div class="hero">
+      <div class="heroT">
+        <h2>BesTrip</h2>
+        <h2>BesTrip</h2>
+      </div>
+    </div>
+    <p class="heroP">
+      Bestrip, the world's leading platform for hiking and outdoor enthusiasts,
       <br />
+      powered by FCAI + Software Chasers.
+    </p>
+
+    <div class="mountains">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <div class="card">
-      <div class="card-img" id="marin"></div>
-      <div class="card-discription">
-        <h2 id="visit-header">Visit Marin County</h2>
-        <h2 id="visit-state">California</h2>
-        <p>
-          Just north of San Francisco and in driving distance of Napa, Marin is
-          the nature part of life everyone has been missing. From its rolling
-          hills, to its redwood tree forests; Marin is home to unforgettable
-          hikes and panoramic views. Popular spots are Muir Woods National
-          Monument, Mount Tamalpais State Park, and Bolinas Ridge.
-        </p>
+    <div class="hero-spacer"></div>
+
+    <div class="content-section">
+      <div class="content-acc">
+        <div></div>
+        <div></div>
       </div>
-      <button id="booknowbtn">
-        <a href="#"> View more information </a>
-      </button>
+      <p class="subt">The Trips Program</p>
+      <h3 class="title">
+        Visite Different <br />
+        And New Places.
+      </h3>
+      <p class="subp">
+        Enjoy the adventures of discovering new places, <br />Ensuring your
+        trips are on point.
+      </p>
     </div>
-    <div class="card">
-      <div class="card-img" id="marin"></div>
-      <div class="card-discription">
-        <h2 id="visit-header">Visit Marin County</h2>
-        <h2 id="visit-state">California</h2>
-        <p>
-          Just north of San Francisco and in driving distance of Napa, Marin is
-          the nature part of life everyone has been missing. From its rolling
-          hills, to its redwood tree forests; Marin is home to unforgettable
-          hikes and panoramic views. Popular spots are Muir Woods National
-          Monument, Mount Tamalpais State Park, and Bolinas Ridge.
-        </p>
+    <section class="hhhttt">
+      <h2 style="color: #accbf7; justify-content: center; text-align: center">
+        Our Trips Guide >>>.....
+      </h2>
+      <br />
+      <div>
+        <a href="../index.html"
+          ><img src="../index/img/logo113.png" alt="" id="logo"
+        /></a>
+        <br />
       </div>
-      <button id="booknowbtn">
-        <a href="#"> View more information </a>
-      </button>
-    </div>
-    <div class="card">
-      <div class="card-img" id="yosemite"></div>
-      <div class="card-discription">
-        <h2 id="visit-header">Visit Yosemite</h2>
-        <h2 id="visit-state">California</h2>
-        <p>
-          Yosemite is a jaw dropping National Park, hidden away in California’s
-          Sierra Nevada mountains. It’s famed for its giant ancient sequoia
-          trees and iconic vistas. After a long day hiking Bridalveil Fall, El
-          Capitan, or Half Dome; you can wind down at Yosemite Village which has
-          shops, restaurants, lodging.
-        </p>
+      <div class="card">
+        <div class="card-img" id="marin"></div>
+        <div class="card-discription">
+          <h2 id="visit-header">Visit Marin County</h2>
+          <h2 id="visit-state">California</h2>
+          <p>
+            Just north of San Francisco and in driving distance of Napa, Marin
+            is the nature part of life everyone has been missing. From its
+            rolling hills, to its redwood tree forests; Marin is home to
+            unforgettable hikes and panoramic views. Popular spots are Muir
+            Woods National Monument, Mount Tamalpais State Park, and Bolinas
+            Ridge.
+          </p>
+        </div>
+        <button id="booknowbtn">
+          <a href="#"> View more information </a>
+        </button>
       </div>
-      <button id="booknowbtn">
-        <a href="#"> View more information </a>
-      </button>
-    </div>
-    <div class="card">
-      <div class="card-img" id="sb"></div>
-      <div class="card-discription">
-        <h2 id="visit-header">Visit Santa Barbara</h2>
-        <h2 id="visit-state">California</h2>
-        <p>
-          Santa Barbara is a city on the central California coast, with the
-          Santa Ynez Mountains as dramatic backdrop. Downtown,
-          Mediterranean-style white stucco buildings with red-tile roofs reflect
-          the city’s Spanish colonial heritage. Upscale boutiques and
-          restaurants offering local wines and seasonal fare line State Street.
-        </p>
+      <div class="card">
+        <div class="card-img" id="marin"></div>
+        <div class="card-discription">
+          <h2 id="visit-header">Visit Marin County</h2>
+          <h2 id="visit-state">California</h2>
+          <p>
+            Just north of San Francisco and in driving distance of Napa, Marin
+            is the nature part of life everyone has been missing. From its
+            rolling hills, to its redwood tree forests; Marin is home to
+            unforgettable hikes and panoramic views. Popular spots are Muir
+            Woods National Monument, Mount Tamalpais State Park, and Bolinas
+            Ridge.
+          </p>
+        </div>
+        <button id="booknowbtn">
+          <a href="#"> View more information </a>
+        </button>
       </div>
-      <button id="booknowbtn">
-        <a href="#"> View more information </a>
-      </button>
-    </div>
-    <div class="card">
-      <div class="card-img"></div>
-      <div class="card-discription">
-        <h2 id="visit-header">Visit Austin</h2>
-        <h2 id="visit-state">Texas</h2>
-        <p>
-          Austin is the state capital of Texas, an inland city bordering the
-          Hill Country region. Home to the famous 6th Street bar scene, Austin
-          is known for its eclectic live-music scene centered around country,
-          blues, and rock. Its many parks and lakes are popular for hiking,
-          biking, swimming and boating.
-        </p>
+      <div class="card">
+        <div class="card-img" id="yosemite"></div>
+        <div class="card-discription">
+          <h2 id="visit-header">Visit Yosemite</h2>
+          <h2 id="visit-state">California</h2>
+          <p>
+            Yosemite is a jaw dropping National Park, hidden away in
+            California’s Sierra Nevada mountains. It’s famed for its giant
+            ancient sequoia trees and iconic vistas. After a long day hiking
+            Bridalveil Fall, El Capitan, or Half Dome; you can wind down at
+            Yosemite Village which has shops, restaurants, lodging.
+          </p>
+        </div>
+        <button id="booknowbtn">
+          <a href="#"> View more information </a>
+        </button>
       </div>
-      <button id="booknowbtn">
-        <a href="#"> View more information </a>
-      </button>
-    </div>
+      <div class="card">
+        <div class="card-img" id="sb"></div>
+        <div class="card-discription">
+          <h2 id="visit-header">Visit Santa Barbara</h2>
+          <h2 id="visit-state">California</h2>
+          <p>
+            Santa Barbara is a city on the central California coast, with the
+            Santa Ynez Mountains as dramatic backdrop. Downtown,
+            Mediterranean-style white stucco buildings with red-tile roofs
+            reflect the city’s Spanish colonial heritage. Upscale boutiques and
+            restaurants offering local wines and seasonal fare line State
+            Street.
+          </p>
+        </div>
+        <button id="booknowbtn">
+          <a href="#"> View more information </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="card-img"></div>
+        <div class="card-discription">
+          <h2 id="visit-header">Visit Austin</h2>
+          <h2 id="visit-state">Texas</h2>
+          <p>
+            Austin is the state capital of Texas, an inland city bordering the
+            Hill Country region. Home to the famous 6th Street bar scene, Austin
+            is known for its eclectic live-music scene centered around country,
+            blues, and rock. Its many parks and lakes are popular for hiking,
+            biking, swimming and boating.
+          </p>
+        </div>
+        <button id="booknowbtn">
+          <a href="#"> View more information </a>
+        </button>
+      </div>
+    </section>
   </body>
 </html>
