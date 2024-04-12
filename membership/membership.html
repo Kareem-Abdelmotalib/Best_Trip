@@ -1,321 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership-Bestrip</title>
-    <link rel="stylesheet" href="css/membership.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Font Awesome -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="aboutus.css" />
+    <link rel="stylesheet" href="css/membership.css" />
+    <title>Membership</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com"  />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
-</head>
-<body>
-<!--start nav-->
-<div class="nav">
-    <div class="container">
-        <div class="left-nav">
-            <a href="#"><i class="fab fa-facebook "></i></a>
-            <a href="#"><i class="fab fa-twitter "></i></a>
-            <a href="#"><i class="fab fa-instagram "></i></a>
-            <a href="#"><i class="fab fa-youtube "></i></a>
+  </head>
+  <body>
+    <header class="fixed-header">
+      <div class="container flex items-center justify-between">
+        <div class="logo">
+          <img
+            src="images/Logo-1.png"
+            alt=""
+            class="logo-img w-16 object-contain"
+            style="opacity: 0.7; width: 110px; height: 40px"
+          />
         </div>
-        <div class="right-nav">
-            <h3>+201018200812</h3>
-            <h3>bestrip.info@gmail.com</h3>
-            <p>BesTrip , ID 2232020</p>
-        </div>
-    </div>
-</div>
-<!--end nav-->
-
-<!--start header-->
-<header>
-    <div class="container">
-        <a href="#" class="logo">
-            <img src="images/Logo-1.png" alt="">
-        </a>
-        <nav>
-            <i class="fas fa-bars toggle-menu"></i>
-            <ul>
-                <li><a  href="../index.html">Home</a></li>
-                <li><a href="../about_us/aboutus.html">About Us</a></li>
-                <li><a href="index/tarakking.html">Trekking</a></li>
-                <li><a class="active" href="../membership/membership.html">Membership</a></li>
-                <li><a href="../ourguide/ourguide.html">Guide</a></li>
-                <li><a href="../Contact_Us/Contact_Us.html">Contact Us</a></li>
-            </ul>
-            <div class="form">
-                <i class="fas fa-search"></i>
-            </div>
+        <nav class="nav-links flex gap-x-5">
+          <li>
+            <a
+              href="../index.html"
+              class="text-gray-500 hover:text-gray-900 transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../about_us/aboutus.html"
+              class="text-gray-500 hover:text-gray-900 transition-colors duration-300"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="../membership/membership.html"
+              class="text-gray-500 hover:text-gray-900 transition-colors duration-300"
+              >Membership</a
+            >
+          </li>
+          <li>
+            <a
+              href="../ourguide/ourguide.html"
+              class="text-gray-500 hover:text-gray-900 transition-colors duration-300"
+              >Guide</a
+            >
+          </li>
+          <li>
+            <a
+              href="../Contact_Us/Contact_Us.html"
+              class="text-gray-500 hover:text-gray-900 transition-colors duration-300"
+              >Contact Us</a
+            >
+          </li>
         </nav>
-        <a href="../login/login/login.html" class="a">Login</a>
+      </div>
+    </header>
+    <style>
+      .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #191b1a63;
+        z-index: 1000;
+        padding: 0.5rem 4rem;
+        box-shadow: 0 2px 4px rgba(93, 136, 116, 0.1);
+      }
+      .nav-links li a {
+        transition: color 0.3s ease;
+      }
+      .nav-links li:last-child {
+        margin-right: 0;
+      }
+    </style>
+    <div class="about-photo">
+      <img src="images/trip.jpg" alt="Trips" class="trip-photo" />
     </div>
-</header>
-<!--end header-->
+    <style>
+      .about-photo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+      }
+      .trip-photo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+        filter: blur(10px);
+      }
+    </style>
+    <script>
+      const photo = document.querySelector(".trip-photo");
+      window.addEventListener("scroll", () => {
+        const transform = `translateY(${scroll * 0.5}px)`;
+        const blur = 10 + scroll * 0.01;
+        photo.style.transform = transform;
+        photo.style.filter = `blur(${blur}px)`;
+      });
+    </script>
+    <section class="pricing">
+      <h1>Choose a plan</h1>
+      <p>Choose a plan that is right for you</p>
+      <div class="switch__container">
+        <span
+          >Billed
+          <input
+            type="radio"
+            name="billing"
+            value="monthly"
+            id="monthly"
+            checked
+            onchange="changePrice()"
+          />monthly</span
+        >
+        <label for="monthly" class="switch">
+          <input
+            type="radio"
+            name="billing"
+            value="annually"
+            id="annually"
+            onchange="changePrice()"
+          />
+          <span class="slider"></span>
+        </label>
+        <span>Billed <label for="annually">annually</label></span>
+      </div>
 
-<!--start landing-->
-<div class="landing">
-<h1>Membership</h1>
-<div class="text">
-<a href="../index.html">Home</a>
-<span> /Membership</span>
-</div>
-</div>
-<!--end landing-->
+      <div class="grid">
+        <div class="grid__item">
+          <h2>Starter</h2>
+          <span class="grid__price" id="starter-price"
+            >$19<span>/ month</span></span
+          >
 
-<!--start experience-->
-<div class="experience">
-    <div class="container">
-        <div class="imge">
-            <img src="images/travel2.jpg" alt="">
+          <ul>
+            <li>500 a</li>
+            <li>3 Trips</li>
+            <li>Unlimited guides</li>
+            <li>Unlimited flows</li>
+            <li>Rabide In Response</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#" id="starter-link">Choose Plans</a>
         </div>
-        <div class="info">
-            <h3>WHY CHOOSE US</h3>
-            <h2>Elevating Your Hiking Experience</h2>
-            <p>Lorem ipsum dolor sit amet consectetur
-                adipiscing elit nunc sit amet tur velit
-                maecenas nec sodales sapien donec id odio
-                nibh. Morbi mollis laoreet diam eget elementum.
-                Etiam ut accumsan felis.</p>
-            <div class="content">
-                <div class="imges">
-                    <img src="images/travel.jpg" alt="">
-                </div>
-                <div class="text">
-                    <ul>
-                        <li>Consectetur adipiscing elit.</li>
-                        <li>Nulla lacinia velit at nunc.</li>
-                        <li>Phasellus tincidunt sed nisl.</li>
-                        <li>interdum vestibulum null.</li>
-                        <li>Cras vestibulum, metus.</li>
-                    </ul>
-<a href="../ourguide/ourguide.html">                    <button>View All</button>
-</a>
-                </div>
-            </div>
-        </div>
-        <div class="left-exp">
-            <div class="box">
-                <h3>Safety First Approach</h3>
-                <p>Lorem ipsum dolor sit amet cons adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo.</p>
-            </div>
-            <div class="box">
-                <h3>Trail Recommendations</h3>
-                <p>Lorem ipsum dolor sit amet cons adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo.</p>
-            </div>
-            <div class="box">
-                <h3>Customer Support</h3>
-                <p>Lorem ipsum dolor sit amet cons adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!--endexperience-->
 
-<!--start peaks-->
-<div class="peaks">
-    <h3>JOIN MEMBERSHIP</h3>
-    <h1>Join Our Hiking & Mountain Community Today</h2>
-    <div class="container">
-        <div class="box">
-        <h2>Explore Peaks</h2>
-        <h3><sup>$</sup><span>49.99</span>/session</h3>
-        <h3>intermediate</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p>
-        <ul>
-            <li>Personalized hiking trails</li>
-            <li>Expert guidance available</li>
-            <li>Safety equipment provided</li>
-            <li>Group discounts available</li>
-            <li>Access to mountain campsites</li>
-            <li>omplimentary snacks & drinks </li>
-        </ul>
-        <a href="../login/login/login.html">Get Started</a>
-        </div>
-        <div class="box">
-            <h2>Explore Peaks</h2>
-            <h3><sup>$</sup><span>79.99</span>/session</h3>
-            <h3>intermediate</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p>
-            <ul>
-                <li>Personalized hiking trails</li>
-                <li>Expert guidance available</li>
-                <li>Safety equipment provided</li>
-                <li>Group discounts available</li>
-                <li>Access to mountain campsites</li>
-                <li>omplimentary snacks & drinks </li>
-            </ul>
-            <a href="../login/login/login.html">Get Started</a>
-            </div>
-            <div class="box">
-                <h2>Explore Peaks</h2>
-                <h3><sup>$</sup><span>129.99</span>/session</h3>
-                <h3>intermediate</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit tellus luctus nec ullamcorper mattis pulvinar.</p>
-                <ul>
-                    <li>Personalized hiking trails</li>
-                    <li>Expert guidance available</li>
-                    <li>Safety equipment provided</li>
-                    <li>Group discounts available</li>
-                    <li>Access to mountain campsites</li>
-                    <li>omplimentary snacks & drinks </li>
-                </ul>
-                <a href="../login/login/login.html">Get Started</a>
-            </div>
-    </div>
-</div>
-<!--end peaks-->
+        <div class="grid__item">
+          <h2>Pro</h2>
+          <span class="grid__price" id="pro-price"
+            >$99<span>/ month</span></span
+          >
+          <div class="grid__select">
+            <select name="" id="maus" onchange="changePrice()">
+              <option value="2500">2500 MAUs</option>
+            </select>
+            <span id="maus-text">Monthly Active Users</span>
+          </div>
 
-<!--start testimonials-->
-<div class="testimonials" >
-    <div class="container">
-        <div class="box">
-            <img  src="images/opnion-1.jpg" alt="" />
-            <h3>Ahmed Moustafa</h3>
-            <span class="title">Full Stack Developer</span>
-            <div class="rate">
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus
-                quaerat ducimus
-            </p>
+          <ul>
+            <li>All Starter features, plus:</li>
+            <li>Unlimited Trips</li>
+            <li>Unlimited fully customizable Guidence</li>
+            <li>A dedicated customer success manager</li>
+          </ul>
+          <a href="#" id="pro-link" class="selected">Choose Plans</a>
         </div>
-        <div class="box">
-            <img  src="images/opnion-2.jpg" alt="" />
-            <h3>Hossam Mohamed</h3>
-            <span class="title">Full Stack Developer</span>
-            <div class="rate">
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus
-                quaerat ducimus
-            </p>
-        </div>
-        <div class="box">
-            <img  src="images/opnion-3.jpg" alt="" />
-            <h3> Abdelaziz Ahmed</h3>
-            <span class="title">Full Stack Developer</span>
-            <div class="rate">
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus
-                quaerat ducimus
-            </p>
-        </div>
-        <div class="box">
-            <img  src="images/opnion-4.jpg" alt="" />
-            <h3>Kareem Khalafala</h3>
-            <span class="title">Full Stack Developer</span>
-            <div class="rate">
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus
-                quaerat ducimus
-            </p>
-        </div>
-        <div class="box">
-            <img  src="images/opnion-5.jpg" alt="" />
-            <h3>Mohamed Magdy</h3>
-            <span class="title">Full Stack Developer</span>
-            <div class="rate">
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus
-                quaerat ducimus
-            </p>
-        </div>
-        <div class="box">
-            <img  src="images/opnion-6.jpg" alt="" />
-            <h3>Yossef Mahmoud</h3>
-            <span class="title">Full Stack Developer</span>
-            <div class="rate">
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="filled fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum, amet est natus
-                quaerat ducimus
-            </p>
-        </div>
-    </div>
-</div>
-<!--end testimonials-->
 
-<!--start footer-->
-<div class="footer">
-    <div class="container">
-        <div class="box">
-            <img src="images/Logo-1.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut elit el tellus, luctus nec ullamcorper mattiso amatug.</p>
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook "></i></a>
-                <a href="#"><i class="fab fa-twitter "></i></a>
-                <a href="#"><i class="fab fa-instagram "></i></a>
-                <a href="#"><i class="fab fa-youtube "></i></a>
-            </div>
+        <div class="grid__item">
+          <h2>Enterprise</h2>
+          <span class="grid__price" id="enterprise-price">Let's Talk</span>
+
+          <ul>
+            <li>All Pro features</li>
+            <li>Unlimited MAUs</li>
+            <li>Dedicated environment</li>
+            <li>Enterprise account administration</li>
+            <li>Premium support and services</li>
+          </ul>
+          <a href="#" id="enterprise-link">Choose Plans</a>
         </div>
-        <div class="box Links">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">portfolio</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="box Trips">
-            <a href="#">Mount Everest</a>
-            <a href="#">Kilimanjaro</a>
-            <a href="#">Denali</a>
-            <a href="#">Mont Blance</a>
-            <a href="#">Aconcagua</a>
-            <a href="#">Mount Fuji</a>
-        </div>
-        <div class="box2">
-            <h2>Phone <span>+201018200812</span></h2>
-            <h2>email <span>Bestrip.info@gmail.com</span></h2>
-            <h2>location<span>BesTrip , ID 2232020</span></h2>
-        </div>
-    </div>
-    <div class="info">
-        <div class="right">
-            <h3>Privacy Policy</h3>
-            <h3>Terms & Services</h3>
-        </div>
-        <h3>Copyright 2024 © All Right Reserved Design by Rometheme</h3>
-    </div>
-</div>
-<!--end footer-->
-</body>
+      </div>
+    </section>
+    <style>
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #1b191963;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+
+    <footer>
+      <p>&copy; 2024 BsTrip. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
+<script>
+  function changePrice() {
+    let monthly = document.querySelector(
+      'input[name="billing"][value="monthly"]:checked'
+    );
+    let annual = document.querySelector(
+      'input[name="billing"][value="annually"]:checked'
+    );
+    let starterPrice = document.getElementById("starter-price");
+    let proPrice = document.getElementById("pro-price");
+    let enterprisePrice = document.getElementById("enterprise-price");
+    let maus = document.getElementById("maus");
+    let mausText = document.getElementById("maus-text");
+    if (monthly) {
+      starterPrice.innerHTML = "$19<span>/ month</span>";
+      proPrice.innerHTML = "$99<span>/ month</span>";
+      enterprisePrice.innerHTML = "Let's Talk";
+      mausText.innerHTML = "Monthly Active Users";
+    } else if (annual) {
+      starterPrice.innerHTML = "$190<span>/ year</span>";
+      proPrice.innerHTML = "$990<span>/ year</span>";
+      enterprisePrice.innerHTML = "$200<span>/ year</span>";
+      mausText.innerHTML = "Annual Active Users";
+    }
+  }
+</script>
