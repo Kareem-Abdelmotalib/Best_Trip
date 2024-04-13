@@ -1,225 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BesTrip</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
     <link rel="stylesheet" href="ourguide.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+  </head>
+  <body>
+    <style>
+      header nav ul li a {
+        margin: 10px;
+        padding: 15px;
+        color: inherit;
+        text-decoration: none;
+        color: white;
+      }
+
+      header nav ul li a:hover {
+        color: rgba(153, 219, 147, 0.87);
+      }
+    </style>
+    <br />
+
     <header>
-        <img src="imgs/Logo-1.png" width="300" height="100" alt="alm">
-        <nav aria-label="main">
-          <a href="../index.html">Home</a>
-          <a href="../about_us/aboutus.html">About Us</a>
-          <a href="index/tarakking.html">Trekking</a>
-          <a href="../membership/membership.html">Membership</a>
-          <a href="../ourguide/ourguide.html">Guide</a>
-          <a href="../ourprogram/ourprogram.html">Our Program</a>
-          <a href="../Contact_Us/Contact_Us.html">Contact Us</a>
-        </nav>
-        <nav class="get" aria-label="login">
-         <a href="../login/login/login.html" style="margin-left: 20px;">Login</a>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home >>>>>>>>>></a></li>
+          <li>
+            <a href="../login/login/login.html">Contact Us >>>>>>>>>>>>>></a>
+          </li>
+          <li>
+            <a href="../membership/membership.html"
+              >Membership >>>>>>>>>>>>>>>></a
+            >
+          </li>
+          <li><a href="../Contact_Us/Contact_Us.html">Login >>>>>>>>>></a></li>
+        </ul>
+      </nav>
     </header>
-    <section class="carsour">
-        <div >
-          <h1><B><strong> OUR GUIDE</B></h1>
-           <div>
-            <p style="color: #dcdcdc;"><B><a href="../index.html" style="color: aqua;">Home</a> / Our Quite</B></p>
-           </div>
-        </div>
-    </section >
-    <div style="background: linear-gradient(to right, #000000, #434343,#202166, #878787, #dcdcdc);">
-      <br><br><br><br><br><br><br>
-    <section class="heading">
-     <p><B>OUR GUIDE</B></p>
-     <br>
-     <h1>The Expertise Guide</h1>
-    </section>
-    <br><br>
-    <section class="protofilio">
-      <div class="container">
-        <div class="card">
-             <img src="imgs/Alex.jpg" alt="alm">
-             <div class="desc">
-               <p style="font-size: 60px;">Alex Turner</p>
-               <p style=" font-size:40px ;color: #F6892A; ">The Guide</p>
-             </div>
-             <div class="subicons">
-              <!-- Facebook Icon -->
-             <i style="font-size: 50px;" class="fab fa-facebook"></i>
+    <div
+      id="title"
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+      "
+    >
+      <h1 id="first" class="title">Welcome To</h1>
+      <h1 id="second" class="title">Our Guide</h1>
+      <h1 id="third" class="title">Page</h1>
+    </div>
+    <script>
+      const titles = document.querySelectorAll(".title");
+      titles.forEach((title, index) => {
+        setTimeout(() => {
+          title.style.opacity = 1;
+          let colors = ["#007D7D", "#007B3D", "#EBEBEB"];
+          title.style.color = colors[index];
+        }, index * 500);
+      });
+    </script>
+    <style>
+      .title {
+        font-size: 6rem;
+        margin: 0;
+      }
+    </style>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-             <!-- Twitter Icon -->
-             <i style="font-size: 50px;" class="fab fa-twitter"></i>
-
-             <!-- Instagram Icon -->
-             <i style="font-size: 50px;" class="fab fa-instagram"></i>
-
-             <!-- LinkedIn Icon -->
-             <i style="font-size: 50px;" class="fab fa-linkedin"></i>
-         </div>
-         <br><br><br>
-        </div>
-        <div class="card">
-          <img src="imgs/Alex1.jpg" alt="alm">
-            <div class="desc">
-              <p style="font-size: 60px;">Alex Turner</p>
-              <p style=" font-size:40px ;color: #F6892A; ">The Guide</p>
-            </div> 
-            <div class="subicons">
-              <!-- Facebook Icon -->
-             <i style="font-size: 50px;" class="fab fa-facebook"></i>
-
-             <!-- Twitter Icon -->
-             <i style="font-size: 50px;" class="fab fa-twitter"></i>
-
-             <!-- Instagram Icon -->
-             <i style="font-size: 50px;" class="fab fa-instagram"></i>
-
-             <!-- LinkedIn Icon -->
-             <i style="font-size: 50px;" class="fab fa-linkedin"></i>
-         </div>
-         <br><br><br>
-        </div>
-        <div class="card">
-          <img src="imgs/Alex2.jpg" alt="alm">
-            <div class="desc">
-              <p style="font-size: 60px;">Alex Turner</p>
-              <p style=" font-size:40px ;color: #F6892A; ">The Guide</p>
-            </div>
-            <div class="subicons">
-              <!-- Facebook Icon -->
-             <i style="font-size: 50px;" class="fab fa-facebook"></i>
-
-             <!-- Twitter Icon -->
-             <i style="font-size: 50px;" class="fab fa-twitter"></i>
-
-             <!-- Instagram Icon -->
-             <i style="font-size: 50px;" class="fab fa-instagram"></i>
-
-             <!-- LinkedIn Icon -->
-             <i style="font-size: 50px;" class="fab fa-linkedin"></i>
-         </div>
-         <br><br><br>
-        </div>
-        <div class="card">
-          <img src="imgs/Alex3.jpg" alt="alm">
-            <div class="desc">
-              <p style="font-size: 60px;">Alex Turner</p>
-              <p style=" font-size:40px ;color: #F6892A; ">The Guide</p>
-            </div>
-            <div class="subicons">
-              <!-- Facebook Icon -->
-             <i style="font-size: 50px;" class="fab fa-facebook"></i>
-
-             <!-- Twitter Icon -->
-             <i style="font-size: 50px;" class="fab fa-twitter"></i>
-
-             <!-- Instagram Icon -->
-             <i style="font-size: 50px;" class="fab fa-instagram"></i>
-
-             <!-- LinkedIn Icon -->
-             <i style="font-size: 50px;" class="fab fa-linkedin"></i>
-         </div>
-         <br><br><br>
-        </div>
-        <div class="card">
-          <img src="imgs/Alex4.jpg" alt="alm">
-            <div class="desc">
-              <p style="font-size: 60px;">Alex Turner</p>
-              <p style=" font-size:40px ;color: #F6892A; ">The Guide</p>
-            </div>
-            <div class="subicons">
-              <!-- Facebook Icon -->
-             <i style="font-size: 50px;" class="fab fa-facebook"></i>
-
-             <!-- Twitter Icon -->
-             <i style="font-size: 50px;" class="fab fa-twitter"></i>
-
-             <!-- Instagram Icon -->
-             <i style="font-size: 50px;" class="fab fa-instagram"></i>
-
-             <!-- LinkedIn Icon -->
-             <i style="font-size: 50px;" class="fab fa-linkedin"></i>
-         </div>
-         <br><br><br>
-        </div>
-        <div class="card">
-          <img src="imgs/Alex5.jpg" alt="alm">
-            <div class="desc">
-              <p style="font-size: 60px;">Alex Turner</p>
-              <p style=" font-size:40px ;color: #F6892A; ">The Guide</p>
-            </div>
-            <div class="subicons">
-              <!-- Facebook Icon -->
-             <i style="font-size: 50px;" class="fab fa-facebook"></i>
-
-             <!-- Twitter Icon -->
-             <i style="font-size: 50px;" class="fab fa-twitter"></i>
-
-             <!-- Instagram Icon -->
-             <i style="font-size: 50px;" class="fab fa-instagram"></i>
-
-             <!-- LinkedIn Icon -->
-             <i style="font-size: 50px;" class="fab fa-linkedin"></i>
-         </div>
-        </div>
+    <div style="display: flex; align-items: center; justify-content: center">
+      <img
+        src="https://images.app.goo.gl/o91wh2ygRfeKxgWJA"
+        style="
+          width: 20vw;
+          height: 20vw;
+          object-fit: cover;
+          margin-right: 2vw;
+          border-radius: 8%;
+        "
+      />
+      <div>
+        <h1 style="text-align: center; color: aliceblue">Our Guiders In</h1>
+        <h2 style="text-align: center; color: aliceblue">BesTrip</h2>
+        <h2 style="text-align: center; color: aliceblue">
+          Giving you the Best Hiking Experience
+        </h2>
+        <video controls style="width: 40vw; height: auto">
+          <source
+            src="https://youtu.be/H5FlcU5RXP4?si=0FE0tfhB4zTUMUPK"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </div>
-    </section>
-    <br><br>
-  </div>
-    <section class="body" style="background: linear-gradient(to left, #000000, #434343,#0d11f8e5, #878787, #dcdcdc);">
-      <div class="cont">
-        <div class="statistics">
-           <div class="stat-box"><B><B><strong><strong>75k </strong></strong></B></B><span style="margin-right: 10px;">Member Active</span></div>
-          <div class="stat-box"><B><B>213 </B></B>  Expert Guide</div>
-          <div class="stat-box"><B><B>8.5k </B></B>  Client Rating</div>
-          <div class="stat-box"><B><B>254 </B></B>  Years Experience</div>
-        </div>
-         <br><br><br>
-        <div class="head">Giving you the Best Hiking Experience</div>
-        <p class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ufeait tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-         <br>
-         <br><br><br>
-<a href="../login/login/login.html"><button class="book-now-btn">Book Now</button>
-</a>
-        </div>
-    </section>
-     <section class="last-nav">
-      <section class="last-nav">
-       <section class="last-nav" style="background-size:cover; background-repeat:no-repeat; background-attachment: fixed; background-image: url(https://source.unsplash.com/random/1920x1080);">
-        <section class="last-nav" style="background-image: linear-gradient(to left, #0c0b0b, #202166, #000); background-attachment: fixed;">
-        <section class="last-nav" style="background-image: url(imgs/earth-bg.png); background-attachment: fixed;">
-      <div class="container">
-          <img src="imgs/logo1.png" alt="" />
-          <ul>
-            <li style="font-size: 10px;color: white;"><a href="../index.html">Home</a></li>
-            <li style="font-size: 10px;color: white;"><a href="../about_us/aboutus.html">About Us</a></li>
-            <li style="font-size: 10px;color: white;"><a href="index/tarakking.html">Trekking</a></li>
-            <li style="font-size: 10px;color: white;"><a href="../membership/membership.html">Membership</a></li>
-            <li style="font-size: 10px;color: white;"><a href="../ourguide/ourguide.html">Guide</a></li>
-            <li style="font-size: 10px;color: white;"><a href="../Contact_Us/Contact_Us.html">Contact Us</a></li>
-          </ul>
-          <h4 style="color: #dcdcdc;">Bestrip is the leading travel company in the Middle East, dedicated to providing unforgettable trekking adventures and exceptional hospitality experiences for adventurous individuals and groups.</h4>
-        <br>
-          <div class="social">
-               <!-- Facebook Icon -->
-              <i style="font-size: 50px;" class="fab fa-facebook"></i>
+    </div>
+    <div class="track">
+      <ul>
+        <li id="one">
+          <article>
+            <img
+              src="imgs/Alex.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 7%;
+              "
+            />
+            <p class="name">Ahmed Younis</p>
+          </article>
+        </li>
+        <li id="two">
+          <article>
+            <img
+              src="imgs/Alex1.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 7%;
+              "
+            />
+            <p class="name">Malak Mostafa</p>
+          </article>
+        </li>
+        <li id="three">
+          <article>
+            <img
+              src="imgs/Alex2.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 7%;
+              "
+            />
+            <p class="name">Mahmoud Ahmed</p>
+          </article>
+        </li>
+        <li id="four">
+          <article>
+            <img
+              src="imgs/Alex3.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 7%;
+              "
+            />
+            <p class="name">Yasmine Ebrahim</p>
+          </article>
+        </li>
+        <li id="five">
+          <article>
+            <img
+              src="imgs/Alex4.jpg"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 7%;
+              "
+            />
+            <p class="name">Sherif Mohammed</p>
+          </article>
+        </li>
+      </ul>
 
-              <!-- Twitter Icon -->
-              <i style="font-size: 50px;" class="fab fa-twitter"></i>
+      <style>
+        .name {
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          margin-top: 2vh;
+          text-align: center;
+          font-size: 3vh;
+        }
+        li:hover .name {
+          opacity: 1;
+        }
+      </style>
+      <div class="track__indicators" aria-hidden="true">
+        <a href="#one" class="indicator"></a>
+        <a href="#two" class="indicator"></a>
+        <a href="#three" class="indicator"></a>
+        <a href="#four" class="indicator"></a>
+        <a href="#five" class="indicator"></a>
+      </div>
+    </div>
+    <script>
+      import gsap from "https://cdn.skypack.dev/gsap@3.12.0";
+      import ScrollTrigger from "https://cdn.skypack.dev/gsap@3.12.0/ScrollTrigger";
+      // If you wanted to use <button> for the interactions.
+      // const INDICATORS = document.querySelector('.track__indicators')
 
-              <!-- Instagram Icon -->
-              <i style="font-size: 50px;" class="fab fa-instagram"></i>
+      // const SHIFT = event => {
+      //   if (event.target.tagName === 'BUTTON') {
+      //     const TARGET = [...event.target.parentNode.children].indexOf(event.target)
+      //     const LI = document.querySelector(`li:nth-of-type(${TARGET + 1})`)
+      //     LI.scrollIntoView({
+      //       behavior: 'smooth',
+      //       inline: 'center'
+      //     })
+      //   }
+      // }
 
-              <!-- LinkedIn Icon -->
-              <i style="font-size: 50px;" class="fab fa-linkedin"></i>
-          </div>
-        </div>
-</body>
+      // INDICATORS.addEventListener('click', SHIFT)
+      if (!CSS.supports("animation-timeline: scroll()")) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.set(".track__indicators", { aspectRatio: "7 / 1" });
+
+        const INDICATORS = document.querySelectorAll(".indicator");
+        const ARTICLES = document.querySelectorAll("li");
+        INDICATORS.forEach((indicator, index) => {
+          // Here need to animate the indicator based on the position of the card
+          gsap.to(indicator, {
+            flex: 3,
+            repeat: 1,
+            yoyo: true,
+            scrollTrigger: {
+              scrub: true,
+              horizontal: true,
+              trigger: ARTICLES[index],
+              scroller: "ul",
+              start: "right right",
+              end: "left left",
+              snap: [0, 1],
+            },
+          });
+        });
+      }
+    </script>
+
+    <style>
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #69916963;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+
+    <footer>
+      <p style="color: rgba(208, 223, 223, 0.808)">
+        &copy; 2024 BsTrip. All rights reserved.
+      </p>
+    </footer>
+  </body>
 </html>
