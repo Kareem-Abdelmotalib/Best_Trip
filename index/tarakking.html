@@ -2,157 +2,888 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="trakking.css"
-   
+    <title>Tracking</title>
   </head>
   <body>
-    <nav>
-      <div class="container">
-          <div class="image">
-              <img src="img/logo113.png"> 
-          </div>
+    <div id="app">
+      <header>
+        <div class="header_content">
+          <a href="../index.html" class="logo">BesTrip</a>
+          <nav>
+            <a href="../membership/membership.html" class="nav_link"
+              >Equipment</a
+            >
+            <a href="../about_us/aboutus.html" class="nav_link">About us</a>
+            <a href="../ourguide/ourguide.html" class="nav_link">Blog</a>
+          </nav>
+          <a href="#" class="account">
+            <div class="account_icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.07 18.28C7.5 17.38 10.12 16.5 12 16.5C13.88 16.5 16.51 17.38 16.93 18.28C15.57 19.36 13.86 20 12 20C10.14 20 8.43 19.36 7.07 18.28ZM18.36 16.83C16.93 15.09 13.46 14.5 12 14.5C10.54 14.5 7.07 15.09 5.64 16.83C4.62 15.49 4 13.82 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 13.82 19.38 15.49 18.36 16.83ZM12 6C10.06 6 8.5 7.56 8.5 9.5C8.5 11.44 10.06 13 12 13C13.94 13 15.5 11.44 15.5 9.5C15.5 7.56 13.94 6 12 6ZM12 11C11.17 11 10.5 10.33 10.5 9.5C10.5 8.67 11.17 8 12 8C12.83 8 13.5 8.67 13.5 9.5C13.5 10.33 12.83 11 12 11Z"
+                  fill="white"
+                />
+                <mask
+                  id="mask0_1_50"
+                  style="mask-type: alpha"
+                  maskUnits="userSpaceOnUse"
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.07 18.28C7.5 17.38 10.12 16.5 12 16.5C13.88 16.5 16.51 17.38 16.93 18.28C15.57 19.36 13.86 20 12 20C10.14 20 8.43 19.36 7.07 18.28ZM18.36 16.83C16.93 15.09 13.46 14.5 12 14.5C10.54 14.5 7.07 15.09 5.64 16.83C4.62 15.49 4 13.82 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 13.82 19.38 15.49 18.36 16.83ZM12 6C10.06 6 8.5 7.56 8.5 9.5C8.5 11.44 10.06 13 12 13C13.94 13 15.5 11.44 15.5 9.5C15.5 7.56 13.94 6 12 6ZM12 11C11.17 11 10.5 10.33 10.5 9.5C10.5 8.67 11.17 8 12 8C12.83 8 13.5 8.67 13.5 9.5C13.5 10.33 12.83 11 12 11Z"
+                    fill="white"
+                  />
+                </mask>
+                <g mask="url(#mask0_1_50)"></g>
+              </svg>
+            </div>
+            <div class="account_text">Account</div>
+          </a>
+        </div>
+      </header>
+
+      <div class="social-media">
+        <div class="social-media_text">Follow us</div>
+        <a href="#" class="social-media_icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.8 2.00002H16.2C19.4032 2.00002 22 4.59677 22 7.80002V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.80002C2 4.59677 4.59675 2.00002 7.8 2.00002ZM7.6 4C5.61177 4 4 5.61178 4 7.6V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.6C20 5.61178 18.3882 4 16.4 4H7.6ZM17.25 5.5C17.9404 5.5 18.5 6.05965 18.5 6.75C18.5 7.44036 17.9404 8 17.25 8C16.5596 8 16 7.44036 16 6.75C16 6.05965 16.5596 5.5 17.25 5.5ZM12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23858 9.23857 7 12 7ZM12 9C10.3431 9 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9 12 9Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <a href="#" class="social-media_icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.4592 6.01238C21.6896 6.35373 20.8624 6.58442 19.9944 6.68815C20.8803 6.15701 21.5609 5.31598 21.8813 4.31378C21.052 4.80564 20.1336 5.16278 19.156 5.3552C18.3732 4.52112 17.2579 4 16.0235 4C13.6534 4 11.7317 5.92147 11.7317 8.29155C11.7317 8.6279 11.7697 8.95546 11.8429 9.2696C8.27609 9.0906 5.11375 7.38203 2.99709 4.78551C2.62765 5.41935 2.41601 6.15656 2.41601 6.94309C2.41601 8.43204 3.17364 9.74563 4.32523 10.5153C3.62179 10.4929 2.95996 10.2999 2.38139 9.97846C2.38098 9.99639 2.38098 10.0143 2.38098 10.0324C2.38098 12.1118 3.86033 13.8463 5.82359 14.2406C5.46349 14.3387 5.08434 14.3912 4.69294 14.3912C4.4164 14.3912 4.14755 14.3642 3.88546 14.3142C4.43161 16.0191 6.01653 17.26 7.89454 17.2945C6.42576 18.4457 4.57527 19.1318 2.56453 19.1318C2.21812 19.1318 1.87651 19.1114 1.54077 19.0717C3.44003 20.2894 5.69591 21 8.1195 21C16.0134 21 20.3302 14.4605 20.3302 8.78918C20.3302 8.60314 20.326 8.41805 20.3177 8.23395C21.1563 7.62886 21.8839 6.87302 22.4592 6.01238Z"
+              fill="white"
+            />
+          </svg>
+        </a>
       </div>
-  </nav>
-    <nav>
-      <div class="nav__logo"><a href="../index.html">BestTrip</a></div>
-      <ul class="nav__links">
-        <li class="link">Home</li>
-        <li class="link">TRACKING</li>
-      </ul>
-    </nav>
-    <header>
-      <div class="section__container">
-        <div class="header__content">
-          <h1>Tracking</h1>
-          <p>
-            Embark on a journey of a lifetime and explore the world's most
-            breathtaking destinations with our expert travel advice. From exotic
-            beaches to cultural wonders, we've got you covered with our
-            comprehensive travel guides and insider tips.
+
+      <div class="page-nav">
+        <a id="navStart" class="active" tabindex="0"
+          ><div class="page-nav_text">Start</div>
+          <div class="page-nav_slide"></div
+        ></a>
+        <a id="nav01" tabindex="0"
+          ><div class="page-nav_text">01</div>
+          <div class="page-nav_slide"></div
+        ></a>
+        <a id="nav02" tabindex="0"
+          ><div class="page-nav_text">02</div>
+          <div class="page-nav_slide"></div
+        ></a>
+        <a id="nav03" tabindex="0"
+          ><div class="page-nav_text">03</div>
+          <div class="page-nav_slide"></div
+        ></a>
+      </div>
+
+      <section class="hero" id="hero">
+        <div class="bg-layer-1 HG">
+          <img
+            src="https://res.cloudinary.com/coderabbi/image/upload/v1641892210/MNTN--figma/bg-layer-1_e7t1bk.png"
+            alt="Background"
+          />
+        </div>
+        <div class="bg-layer-2 BG Hero"></div>
+        <div class="bg-layer-3 MG">
+          <img
+            src="https://res.cloudinary.com/coderabbi/image/upload/v1641892219/MNTN--figma/bg-layer-3_xvue3k.png"
+            alt="Background"
+          />
+        </div>
+        <div class="bg-layer-4 VG">
+          <img
+            src="https://res.cloudinary.com/coderabbi/image/upload/v1641892216/MNTN--figma/bg-layer-4_upuiaw.png"
+            alt="Background"
+          />
+        </div>
+        <div class="hero_description">
+          <p class="hero_pre-text">A HIKING GUIDE</p>
+          <h1>Be prepared for the Mountains and beyond!</h1>
+          <p class="hero_post-text">
+            <span class="scroll-text">scroll down</span>
+            <span class="scroll-icon">
+              <svg
+                width="16"
+                height="24"
+                viewBox="0 0 16 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
           </p>
-         <a href="./login/login/login.html"> <button>GET A QOOUTE</button> </a>
         </div>
-      </div>
-    </header>
+      </section>
 
-    <section class="journey__container">
-      <div class="section__container">
-        <h2 class="section__title">Start Your Trip</h2>
-        <p class="section__subtitle">The most searched countries in March</p>
-        <div class="journey__grid">
-          <div class="country__card">
-            <img src="img/pexels-guy-hurst-8398563.jpg" alt="country" width="300" height="300" />
-            <div class="country__name">
-              <i class="ri-map-pin-2-fill"></i>
-              <span>Santorini, Greece</span>
-              
+      <section class="main-content">
+        <section class="guides">
+          <div class="guides_content container">
+            <div class="guide" id="guide1">
+              <div class="guide_description">
+                <div class="guide_number">01</div>
+                <p class="hero_pre-text">get started</p>
+                <h1>What level of hiker are you?</h1>
+                <div class="guide_text">
+                  Determining what level of hiker you are can be an important
+                  tool when planning future hikes. This hiking level guide will
+                  help you plan hikes according to different hike ratings set by
+                  various websites like All Trails and Modern Hiker. What type
+                  of hiker are you – novice, moderate, advanced moderate,
+                  expert, or expert backpacker?
+                </div>
+                <a href="#" class="more">
+                  <span class="more_text">read more</span>
+                  <span class="more_icon">
+                    <svg
+                      width="24"
+                      height="16"
+                      viewBox="0 0 24 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 -6.99382e-07L14.59 1.41L20.17 7L-3.93402e-07 7L-3.0598e-07 9L20.17 9L14.58 14.58L16 16L24 8L16 -6.99382e-07Z"
+                        fill="#FBD784"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="guide_image">
+                <img
+                  src="https://res.cloudinary.com/coderabbi/image/upload/v1641892212/MNTN--figma/guide-image-1_s6zbfn.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="guide" id="guide2">
+              <div class="guide_description">
+                <div class="guide_number">02</div>
+                <p class="hero_pre-text">hiking essentials</p>
+                <h1>Picking the right Hiking Gear!</h1>
+                <div class="guide_text">
+                  The nice thing about beginning hiking is that you don’t really
+                  need any special gear, you can probably get away with things
+                  you already have. Let’s start with clothing. A typical mistake
+                  hiking beginners make is wearing jeans and regular clothes,
+                  which will get heavy and chafe wif they get sweaty or wet.
+                </div>
+                <a href="#" class="more">
+                  <span class="more_text">read more</span>
+                  <span class="more_icon">
+                    <svg
+                      width="24"
+                      height="16"
+                      viewBox="0 0 24 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 -6.99382e-07L14.59 1.41L20.17 7L-3.93402e-07 7L-3.0598e-07 9L20.17 9L14.58 14.58L16 16L24 8L16 -6.99382e-07Z"
+                        fill="#FBD784"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="guide_image">
+                <img
+                  src="https://res.cloudinary.com/coderabbi/image/upload/v1641892223/MNTN--figma/guide-image-2_ezytlj.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="guide" id="guide3">
+              <div class="guide_description">
+                <div class="guide_number">03</div>
+                <p class="hero_pre-text">where you go is the key</p>
+                <h1>Understand Your Map & Timing</h1>
+                <div class="guide_text">
+                  To start, print out the hiking guide and map. If it’s raining,
+                  throw them in a Zip-Lock bag. Read over the guide, study the
+                  map, and have a good idea of what to expect. I like to know
+                  what my next landmark is as I hike. For example, I’ll read the
+                  guide and know that say, in a mile, I make a right turn at the
+                  junction..
+                </div>
+                <a href="#" class="more">
+                  <span class="more_text">read more</span>
+                  <span class="more_icon">
+                    <svg
+                      width="24"
+                      height="16"
+                      viewBox="0 0 24 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 -6.99382e-07L14.59 1.41L20.17 7L-3.93402e-07 7L-3.0598e-07 9L20.17 9L14.58 14.58L16 16L24 8L16 -6.99382e-07Z"
+                        fill="#FBD784"
+                      />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="guide_image">
+                <img
+                  src="https://res.cloudinary.com/coderabbi/image/upload/v1641892215/MNTN--figma/guide-image-3_qarbyl.png"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
-          <div class="country__card">
-            <img src="img/pexels-elina-sazonova-4275975.jpg" alt="country" />
-            <div class="country__name">
-              <i class="ri-map-pin-2-fill"></i>
-              <span>Vernazza, Italy</span>
-            </div>
-          </div>
-          <div class="country__card">
-            <img src="img/pexels-jaime-reimer-3656393.jpg" alt="country" />
-            <div class="country__name">
-              <i class="ri-map-pin-2-fill"></i>
-              <span>San Francisco</span>
-            </div>
-          </div>
-          <div class="country__card">
-            <img src="img/pexels-berkay-ak-12572773.jpg" alt="country" />
-            <div class="country__name">
-              <i class="ri-map-pin-2-fill"></i>
-              <span>navagio, Greece</span>
-            </div>
-          </div>
-          <div class="country__card">
-            <img src="img/pexels-andreas-15896695.jpg" alt="country "/>
-            <div class="country__name">
-              <i class="ri-map-pin-2-fill"></i>
-              <span>Ao Nang, Thailand</span>
-            </div>
-          </div>
-          <div class="country__card">
-            <img src="img/pexels-lan-yao-9383518.jpg" alt="country" />
-            <div class="country__name">
-              <i class="ri-map-pin-2-fill"></i>
-              <span>Phi Phi Island, Thailand</span>
-            </div>
-          </div>
-        </div>                    
-      </div>
-    </section>
+        </section>
+      </section>
 
-    <section class="banner__container">
-      <div class="section__container">
-        <div class="banner__content">
-          <h2>Discount 10-30% Off</h2>
-          <p>
-            Travel the world on a budget with our unbeatable discounted travel
-            deals. Whether you're looking for a last-minute escape or planning
-            ahead, we've got you covered with incredible discounts on flights,
-            hotels, and packages. Don't wait, book now and experience the
-            adventure of a lifetime without breaking the bank.
-          </p>
-         <a href="../membership/membership.html"> <button>See Tours</button> </a>
+      <footer>
+        <div class="footer_content container">
+          <div class="footer_description">
+            <div class="footer_logo">BesTrip</div>
+            <div class="footer_text">
+              Get out there & discover your next slope, mountain & destination!
+            </div>
+            <div class="copyright">
+              Copyright 2019 MNTN, Inc. Terms & Privacy
+            </div>
+          </div>
+          <div class="footer_links">
+            <div class="footer_blog-links">
+              <h3>More on The Blog</h3>
+              <a href="../about_us/aboutus.html" class="footer_link"
+                >About BesTrip</a
+              >
+              <a href="../ourguide/ourguide.html" class="footer_link"
+                >Contributors & Writers</a
+              >
+              <a href="../Contact_Us/Contact_Us.html" class="footer_link"
+                >Write For Us</a
+              >
+              <a href="../Contact_Us/Contact_Us.html" class="footer_link"
+                >Contact Us</a
+              >
+              <a href="#" class="footer_link">Privacy Policy</a>
+            </div>
+            <div class="footer_mntn-links">
+              <h3>More on MNTN</h3>
+              <a href="../team/we.html" class="footer_link">The Team</a>
+              <a href="#" class="footer_link">Jobs</a>
+              <a href="#" class="footer_link">Press</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="display__container">
-      <div class="section__container">
-        <h2 class="section__title">Why Choose Us</h2>
-        <p class="section__subtitle">
-          The gladdest moment in human life, is a departure into unknown lands.
-        </p>
-        <div class="display__grid">
-          <div class="display__card grid-1">
-            <img src="img/pexels-simon-berger-669796.jpg" alt="grid" />
-          </div>
-          <div class="display__card">
-            <i class="ri-earth-line"></i>
-            <h4>Passionate Trip</h4>
-            <p>Fuel your passion for adventure and discover new horizons</p>
-          </div>
-          <div class="display__card">
-            <img src="img/pexels-elina-sazonova-4275986.jpg" alt="grid" />
-          </div>
-          <div class="display__card">
-            <img src="img/pexels-navneet-singh-4110428.jpg" />
-          </div>
-          <div class="display__card">
-            <i class="ri-road-map-line"></i>
-            <h4>Beautiful Places</h4>
-            <p>Uncover the world's most breathtakingly beautiful places</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="section__container">
-        <h4>BestTrip</h4>
-        <div class="social__icons">
-          <span><i class="ri-facebook-fill"></i></span>
-          <span><i class="ri-twitter-fill"></i></span>
-          <span><i class="ri-instagram-line"></i></span>
-          <span><i class="ri-linkedin-fill"></i></span>
-        </div>
-        <p>
-          Travel makes one modest. You see what a tiny place you occupy in the
-          world.
-        </p>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
+  <style>
+    :root {
+      --main-color: #0b1d26ff;
+      --main-color-bb: #0b1d26bb;
+      --main-color-00: #0b1d2600;
+      --accent: #fbd784;
+    }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: all 500ms ease-in-out;
+      scroll-behavior: smooth;
+    }
+    html,
+    body {
+      height: 100vh;
+      margin: 0;
+    }
+    body {
+      background: var(--main-color);
+      color: #fff;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-family: "Be Vietnam Pro", sans-serif;
+    }
+    #app {
+      width: 100%;
+      min-width: 1150px;
+      height: 100%;
+    }
+    .hero img,
+    .guides img {
+      width: 100%;
+      object-fit: cover;
+    }
+    a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+    a:focus {
+      outline: none;
+      border: none;
+    }
+    .nav_link,
+    .footer_link {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      transition: all 300ms ease-in-out;
+    }
+    .nav_link::before,
+    .footer_link::before {
+      content: "";
+      position: absolute;
+      bottom: -10%;
+      width: 0%;
+      height: 0.5px;
+      background: #fff;
+      transition: all 200ms ease-in-out;
+    }
+    .nav_link:hover::before,
+    .nav_link:focus::before,
+    .footer_link:hover::before,
+    .footer_link:focus::before {
+      width: 100%;
+      background: var(--accent);
+    }
+    header {
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      z-index: 10000;
+      user-select: none;
+      transition: top 200ms linear;
+    }
+    .header_content {
+      width: 91.67%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-family: initial;
+      font-weight: 700;
+    }
+    header nav {
+      width: max(13rem, 16%);
+      display: flex;
+      justify-content: space-between;
+      font-size: clamp(0.7rem, 0.9vw, 2rem);
+      font-weight: 500;
+    }
+    .nav_link:hover,
+    .nav_link:focus {
+      color: var(--accent);
+    }
+    .account {
+      display: flex;
+      align-items: center;
+    }
+    .account_icon svg {
+      width: clamp(0.7rem + 6px, 1vw, 2rem);
+    }
+    .account_text {
+      margin-top: -4%;
+      margin-left: 8%;
+      font-size: clamp(0.7rem, 0.9vw, 2rem);
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .account:hover .account_text,
+    .account:focus .account_text {
+      color: var(--accent);
+    }
+    .account:hover .account_icon svg path,
+    .account:focus .account_icon svg path {
+      fill: var(--accent);
+    }
+    .account_text::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 0%;
+      height: 1px;
+      background: #fff;
+      transition: all 200ms ease-in-out;
+    }
+    .account:hover .account_text::before,
+    .account:focus .account_text::before {
+      width: 100%;
+      background: var(--accent);
+    }
+
+    .social-media {
+      width: min(11%, 7.7rem);
+      min-width: 7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 30%;
+      left: 4.165%;
+      transform-origin: bottom left;
+      transform: rotateZ(90deg);
+      user-select: none;
+      z-index: 10000;
+    }
+    .social-media_text {
+      margin-top: -4%;
+      font-size: clamp(0.7rem, 0.9vw, 2rem);
+      font-weight: 500;
+      cursor: default;
+    }
+    .social-media_icon {
+      transition: all 200ms ease-in-out;
+    }
+    .social-media_icon svg {
+      transform: rotateZ(-90deg);
+      width: clamp(0.7rem + 6px, 1vw, 2rem);
+    }
+    .social-media_icon:hover,
+    .social-media_icon:focus {
+      transform-origin: 50% 50%;
+      transform: scale(1.15);
+    }
+    .social-media_icon:hover svg path,
+    .social-media_icon:focus svg path {
+      fill: var(--accent);
+    }
+
+    .page-nav {
+      width: 3.9em;
+      height: 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 30%;
+      right: 4.165%;
+      font-size: clamp(0.7rem, 0.9vw, 2rem);
+      user-select: none;
+      z-index: 10000;
+    }
+    .page-nav a {
+      width: 100%;
+      height: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .page-nav a:hover,
+    .page-nav a:focus {
+      background: linear-gradient(to right, transparent, #0b1d2611);
+    }
+    .page-nav .page-nav_text {
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+      color: #fff9;
+    }
+    .page-nav .page-nav_slide {
+      width: 3px;
+      height: 100%;
+      background: #fff9;
+    }
+    .page-nav .active {
+      background: linear-gradient(to right, transparent, #0b1d2633);
+    }
+    .page-nav .active .page-nav_text {
+      color: #fff;
+      font-weight: 600;
+    }
+    .page-nav .active .page-nav_slide {
+      background: #fff;
+      border-radius: 3em;
+    }
+    .page-nav :not(.active):hover .page-nav_text,
+    .page-nav :not(.active):focus .page-nav_text {
+      color: #fffc;
+      font-weight: 500;
+    }
+    .page-nav :not(.active):hover .page-nav_slide,
+    .page-nav :not(.active):focus .page-nav_slide {
+      background: #fffc;
+    }
+
+    .hero {
+      height: 165%;
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto auto 0;
+      width: 100%;
+      height: 50%;
+      margin-bottom: -14%;
+      background: red;
+      background: linear-gradient(
+        to bottom,
+        var(--main-color-00) 0%,
+        var(--main-color) 70%
+      );
+      z-index: 3;
+    }
+    .bg-layer-1,
+    .bg-layer-2,
+    .bg-layer-3,
+    .bg-layer-4 {
+      position: absolute;
+      width: 100%;
+      pointer-events: none;
+      transition: all 200ms linear;
+      overflow: hidden;
+    }
+    .hero div > img {
+      /* width: 100%;
+  height: 100%; */
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      transition: all 200ms linear;
+    }
+    .bg-layer-1 {
+      height: 121%;
+    }
+    .bg-layer-2 {
+      height: 100%;
+      background: linear-gradient(
+        145deg,
+        var(--main-color-bb),
+        var(--main-color-00)
+      );
+    }
+    .bg-layer-3 {
+      height: 118.5%;
+      top: 27%;
+      z-index: 1;
+    }
+    .bg-layer-4 {
+      height: 77.17%;
+      top: 45%;
+      z-index: 2;
+    }
+    .hero_description {
+      max-height: 14rem;
+      position: absolute;
+      inset: min(24vh, 15.5%) 25% 65%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      user-select: text;
+      transition: all 200ms linear;
+    }
+    .hero_description h1 {
+      font-family: initial;
+      font-size: 4em;
+      font-size: min(9vh, 4em);
+      text-transform: capitalize;
+    }
+    .hero_post-text {
+      display: flex;
+    }
+    .scroll-text {
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-right: 1em;
+    }
+    .scroll-icon {
+      width: 0.8em;
+      margin-top: -0.2em;
+    }
+    .scroll-icon svg {
+      width: 100%;
+    }
+
+    .main-content {
+      margin-top: -14.1%;
+    }
+
+    .guide {
+      width: 100%;
+      height: 524px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 7em;
+      z-index: 10;
+    }
+    .guide:nth-of-type(2n) .guide_description {
+      order: 2;
+    }
+    .guide_image {
+      order: 1;
+    }
+    .guide_description {
+      width: 53.5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 6em 0 6em 6em;
+      z-index: 1;
+      position: relative;
+    }
+    .guide_number {
+      position: absolute;
+      top: 3.5%;
+      left: 0;
+      font-size: 10em;
+      font-family: "Manrope", sans-serif;
+      font-weight: 600;
+      color: #fff2;
+      z-index: -1;
+    }
+    .hero_pre-text {
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.77em;
+      font-weight: 600;
+      letter-spacing: 0.37em;
+    }
+    .hero_pre-text::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 4em;
+      height: 1px;
+      background: var(--accent);
+      margin-right: 1.4em;
+    }
+    .guide_description h1 {
+      font-family: initial;
+      font-size: 3em;
+      font-weight: 500;
+    }
+    .guide_text {
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1.9em;
+    }
+    .more {
+      display: flex;
+    }
+    .more_text {
+      font-size: 0.7rem;
+      margin-right: 0.6em;
+      color: var(--accent);
+      transition: all 150ms linear;
+    }
+    .more_icon {
+      width: 0.9em;
+      margin-top: -0.035em;
+      transition: all 200ms ease-in-out;
+    }
+    .more_icon svg {
+      width: 100%;
+    }
+    .more:hover .more_text,
+    .more:focus .more_text {
+      margin-left: 0.5em;
+    }
+    .more:hover .more_icon,
+    .more:focus .more_icon {
+      transform: rotate(360deg);
+      animation: arrow-active 300ms ease-in-out alternate infinite;
+    }
+    @keyframes arrow-active {
+      from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: 0.25em;
+      }
+    }
+    .guide_image {
+      width: 38.71%;
+      user-select: none;
+    }
+    .guide_image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      height: max(41.5%, 18rem);
+      font-size: 0.8rem;
+      padding-bottom: 4rem;
+    }
+    .footer_content {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .footer_description {
+      width: 26%;
+      height: 89%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 0.725rem;
+    }
+    .footer_logo {
+      font-size: 1.5rem;
+      font-family: initial;
+      font-weight: 700;
+    }
+    .footer_text {
+      width: 80%;
+      font-weight: 600;
+      line-height: 1.8em;
+      margin-top: -30%;
+    }
+    .copyright {
+      color: #fff5;
+    }
+    .footer_links {
+      width: 38.71%;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 300;
+    }
+    .footer_links h3 {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .footer_blog-links {
+      height: 89%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .footer_mntn-links {
+      height: 57%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .footer_link {
+      width: fit-content;
+      font-size: 0.89em;
+      letter-spacing: 0.06em;
+    }
+    .footer_link::before {
+      bottom: -4%;
+    }
+    .footer_link:hover,
+    .footer_link:focus {
+      text-decoration: 0.5px solid underline;
+    }
+
+    .container {
+      width: 76.15%;
+      margin: 0 auto;
+    }
+  </style>
+  <script>
+    const nav = document.querySelectorAll(".page-nav a");
+    const pagePart = document.querySelectorAll("#hero, .main-content [id]");
+    nav.forEach((e, i) =>
+      e.addEventListener("click", () => {
+        nav.forEach((e) => e.classList.remove("active"));
+        e.classList.add("active");
+        pagePart[i].scrollIntoView();
+      })
+    );
+    ["load", "scroll"].forEach((event) => {
+      document.addEventListener(event, () => {
+        pagePart.forEach((e, i) => {
+          if (isVisible(e)) {
+            nav.forEach((e) => e.classList.remove("active"));
+            nav[i].classList.add("active");
+          }
+        });
+      });
+    });
+    nav.forEach((e, i) =>
+      window.addEventListener("keydown", (key) => {
+        if (key.key == i) {
+          nav.forEach((e) => e.classList.remove("active"));
+          e.classList.add("active");
+          pagePart[i].scrollIntoView();
+        }
+      })
+    );
+    function isVisible(ele) {
+      const { top, bottom } = ele.getBoundingClientRect();
+      const vHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+
+      return (top > 0 || bottom > 0) && top < vHeight / 2;
+    }
+    const hero = document.getElementById("hero");
+    const header = document.querySelector("header");
+    const heroText = document.querySelector(".hero_description");
+    const heroBG1 = document.querySelector(".bg-layer-1 img");
+    const heroBG4 = document.querySelector(".bg-layer-4 img");
+
+    window.addEventListener("scroll", () => {
+      let value = window.scrollY;
+      if (value > 1100) {
+        value = 0;
+      }
+      header.style.top = `${value / 1.08}px`;
+      if (value > 350) {
+        header.style.top = 0;
+      }
+      heroBG1.style.top = `-${value / 3}px`;
+      heroBG4.style.top = `${value / 8}px`;
+      heroBG4.style.left = `-${value / 5.5}px`;
+      heroText.style.transform = `translateY(${value / 1.5}px)`;
+    });
+    ScrollReveal().reveal(".guide_description", {
+      duration: 1000,
+      distance: "500px",
+    });
+    ScrollReveal().reveal(".guide_image", {
+      delay: 500,
+      duration: 1000,
+      distance: "500px",
+    });
+  </script>
 </html>
