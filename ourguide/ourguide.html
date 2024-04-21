@@ -1,260 +1,825 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
-    <link rel="stylesheet" href="ourguide.css">
+    <title>Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <style>
-      header nav ul li a {
-        margin: 10px;
-        padding: 15px;
-        color: inherit;
-        text-decoration: none;
-        color: white;
-      }
-
-      header nav ul li a:hover {
-        color: rgba(153, 219, 147, 0.87);
-      }
-    </style>
-    <br />
-
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home >>>>>>>>>></a></li>
-          <li>
-            <a href="../login/login/login.html">Contact Us >>>>>>>>>>>>>></a>
-          </li>
-          <li>
-            <a href="../membership/membership.html"
-              >Membership >>>>>>>>>>>>>>>></a
-            >
-          </li>
-          <li><a href="../Contact_Us/Contact_Us.html">Login >>>>>>>>>></a></li>
-        </ul>
-      </nav>
-    </header>
-    <div
-      id="title"
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 80vh;
-      "
-    >
-      <h1 id="first" class="title">Welcome To</h1>
-      <h1 id="second" class="title">Our Guide</h1>
-      <h1 id="third" class="title">Page</h1>
-    </div>
-    <script>
-      const titles = document.querySelectorAll(".title");
-      titles.forEach((title, index) => {
-        setTimeout(() => {
-          title.style.opacity = 1;
-          let colors = ["#007D7D", "#007B3D", "#EBEBEB"];
-          title.style.color = colors[index];
-        }, index * 500);
-      });
-    </script>
-    <style>
-      .title {
-        font-size: 6rem;
-        margin: 0;
-      }
-    </style>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <div style="display: flex; align-items: center; justify-content: center">
-      <img
-        src="imgs/v2.webp"
-        style="
-          width: 20vw;
-          height: 20vw;
-          object-fit: cover;
-          margin-right: 2vw;
-          border-radius: 8%;
-        "
-      />
-      <div>
-        <h1 style="text-align: center; color: aliceblue">Our Guiders In</h1>
-        <h2 style="text-align: center; color: aliceblue">BesTrip</h2>
-        <h2 style="text-align: center; color: aliceblue">
-          Giving you the Best Hiking Experience
-        </h2>
-        <video controls style="width: 40vw; height: auto">
-          <source
-            src="imgs/v1.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+    <div data-js="hero-demo">
+      <div class="ui-group">
+        <div class="filters button-group js-radio-button-group device-type">
+          <a href="#">
+            <button class="button is-checked" data-filter="*">All</button>
+          </a>
+          <a href="../index.html">
+            <button class="button" data-filter=".cat-1">Home</button>
+          </a>
+          <a href="../Contact_Us/Contact_Us.html">
+            <button class="button" data-filter=".cat-2">Contact Us</button>
+          </a>
+          <a href="../login/login/login.html">
+            <button class="button" data-filter=".cat-3">Login</button>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="track">
-      <ul>
-        <li id="one">
-          <article>
-            <img
-              src="imgs/Alex.jpg"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 7%;
-              "
-            />
-            <p class="name">Ahmed Younis</p>
-          </article>
-        </li>
-        <li id="two">
-          <article>
-            <img
-              src="imgs/Alex1.jpg"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 7%;
-              "
-            />
-            <p class="name">Malak Mostafa</p>
-          </article>
-        </li>
-        <li id="three">
-          <article>
-            <img
-              src="imgs/Alex2.jpg"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 7%;
-              "
-            />
-            <p class="name">Mahmoud Ahmed</p>
-          </article>
-        </li>
-        <li id="four">
-          <article>
-            <img
-              src="imgs/Alex3.jpg"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 7%;
-              "
-            />
-            <p class="name">Yasmine Ebrahim</p>
-          </article>
-        </li>
-        <li id="five">
-          <article>
-            <img
-              src="imgs/Alex4.jpg"
-              style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 7%;
-              "
-            />
-            <p class="name">Sherif Mohammed</p>
-          </article>
-        </li>
-      </ul>
-
       <style>
-        .name {
-          opacity: 0;
-          transition: opacity 0.3s ease-in-out;
-          margin-top: 2vh;
-          text-align: center;
-          font-size: 3vh;
+        /* New styles for the section */
+        #hhhhg {
+          margin: 2rem;
+          padding: 1rem;
+          border: 2px solid #ccc;
+          background-color: #14141469;
+          border-radius: 5px;
         }
-        li:hover .name {
-          opacity: 1;
+        #hhhhg:hover{
+          border: 2px solid #2dcc3593;
+          background-color: #2dcc351e;
+          color: white;
+          
+        }
+
+      h1,  h2 {
+          font-family: "Lato", sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          margin-top: 0;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        p {
+          font-family: "Lato", sans-serif;
+          font-size: 16px;
+          line-height: 1.5;
+          text-align: center;
         }
       </style>
-      <div class="track__indicators" aria-hidden="true">
-        <a href="#one" class="indicator"></a>
-        <a href="#two" class="indicator"></a>
-        <a href="#three" class="indicator"></a>
-        <a href="#four" class="indicator"></a>
-        <a href="#five" class="indicator"></a>
+
+      <section id="hhhhg">
+        <br>
+        <br>
+        <br>
+        <h1>Welcome</h1>
+        <h2>Guide to BesTrip</h2>
+        <p>Welcome to BesTrip, a website that offers you the best and safest travel options.</p>
+        <br>
+        <br>
+        <br>
+      </section>
+      <br>
+      <br>
+      <br>
+      <h2 style="text-align: center;">Places That We Will Visit ..</h2>
+      <br>
+      <ul class="grid">
+        <li class="element-item cat-1" data-category="cat-1">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-1.jpg"
+              alt="gallery-img"
+            />
+            <h1>NewYork</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-2" data-category="cat-2">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-2.jpg"
+              alt="gallery-img"
+            />
+            <h1>Texas</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-3" data-category="cat-3">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg"
+              alt="gallery-img"
+            />
+            <h1>NewDelhii</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-1" data-category="cat-1">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-2.jpg"
+              alt="gallery-img"
+            />
+            <h1>Libia</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-2" data-category="cat-2">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg"
+              alt="gallery-img"
+            />
+            <h1>Calefornia</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-3" data-category="cat-3">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-1.jpg"
+              alt="gallery-img"
+            />
+            <h1>Sanai</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-1" data-category="cat-1">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg"
+              alt="gallery-img"
+            />
+            <h1>Suadia</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-2" data-category="cat-2">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-2.jpg"
+              alt="gallery-img"
+            />
+            <h1>India</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-3" data-category="cat-3">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg"
+              alt="gallery-img"
+            />
+            <h1>Rusian</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-1" data-category="cat-1">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-8.jpg"
+              alt="gallery-img"
+            />
+            <h1>Morraco</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-2" data-category="cat-2">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-5.jpg"
+              alt="gallery-img"
+            />
+            <h1>NewYork</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-3" data-category="cat-3">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-3.jpg"
+              alt="gallery-img"
+            />
+            <h1>Texas</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-1" data-category="cat-1">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-1.jpg"
+              alt="gallery-img"
+            />
+            <h1>London</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-2" data-category="cat-2">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-2.jpg"
+              alt="gallery-img"
+            />
+            <h1>Egypt</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+        <li class="element-item cat-3" data-category="cat-3">
+          <div>
+            <img
+              src="https://www.yudiz.com/codepen/animated-filter-tab/img-5.jpg"
+              alt="gallery-img"
+            />
+            <h1>Stanford</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut.
+            </p>
+          </div>
+        </li>
+      </ul>
+        <section>
+        </div>
+        <style>
+          .popular-places h2 {
+            font-size: 2rem;
+            text-align: center;
+          }
+          .popular-places p {
+            text-align: center;
+            font-size: 1.2rem;
+          }
+        </style>
+        <div class="popular-places container max-w-5xl mx-auto px-8" style="background-image: url(imgs/guide.jpg); background-repeat: no-repeat; ">
+          <h2>Popular Places</h2>
+          <p>Check out these amazing places</p>
+        </div>
+      <div class="container max-w-5xl mx-auto px-8">
+        <div class="card-wraper">
+          <div class="background" id="background"></div>
+          <a
+            href="javascript:void(0)"
+            class="card relative group block p-2 h-full w-full"
+          >
+            <div class="card-main">
+              <div class="card-inner">
+                <div>
+                  <h3>London</h3>
+                  <p>
+                    A type of flowering shrub, its name comes from the Latin
+                    word Rosa. The rose has been a symbol of love, beauty, war,
+                    and politics. The rose plant can be erect shrubs, climbing,
+                    or trailing, with stems that are often armed with sharp
+                    prickles. Flowers vary in size and shape and are usually
+                    large and showy, in colors ranging from white through
+                    yellows and reds. Most species are native to Asia, with
+                    smaller numbers native to Europe, North America, and
+                    northwestern Africa.Roses are often grown as ornamental
+                    plants for their beautiful and sometimes fragrant flowers.
+                    They are popular garden plants but are sometimes grown
+                    indoors and are used as cut flowers.The rose species, China
+                    rose (Rosa chinensis), has been used in traditional Chinese
+                    medicine. The roots and fruits are used for arthritis, joint
+                    pains, coughs, and skin wounds and infections. The flower
+                    buds are used to stimulate blood flow and help with chest
+                    and abdominal pain.Rose water is commonly used in Middle
+                    Eastern and Indian cooking, especially in sweets such as
+                    baklava, nougat, and Turkish delight.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="card relative group block p-2 h-full w-full"
+          >
+            <div class="card-main">
+              <div class="card-inner">
+                <div>
+                  <h3>Marroc</h3>
+                  <p>
+                    Tulips are spring-blooming perennials that grow from bulbs.
+                    Depending on the species, tulip plants can grow as short as
+                    4 inches (10 cm) or as high as 28 inches (71 cm). The
+                    tulip's large flowers usually bloom on scapes or subscapose
+                    stems that lack bracts. Most tulips produce only one flower
+                    per stem, but a few species bear multiple flowers on their
+                    scapes (e.g., Tulipa turkestanica). The showy, generally
+                    cup- or star-shaped tulip flower has three petals and three
+                    sepals, which are often termed tepals because they are
+                    nearly identical.Tulip bulbs are measured in centimeters
+                    around the "waist" of the bulb. Longfield Gardens supplies
+                    tulip bulbs that are at least 12cm in circumference. This
+                    ensures you will always get the biggest, brightest
+                    blooms.Tulip bulbs should be planted in mid to late fall,
+                    any time after the first frost and before the ground
+                    freezes. For best results, plant the bulbs within a month
+                    after you receive them.Plant tulip bulbs 6" to 8" deep and
+                    4" to 5" apart on center. You may plant the bulbs
+                    individually, or can dig out a larger area and plant a
+                    number of bulbs at once. Position the bulbs with the pointy
+                    end up and then cover them with soil. Fall and winter rains
+                    usually provide adequate moisture. Water only if the weather
+                    is very dry.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="card relative group block p-2 h-full w-full"
+          >
+            <div class="card-main">
+              <div class="card-inner">
+                <div>
+                  <h3>Egypt</h3>
+                  <p>
+                    Sunflowers are known for being “happy” flowers, making them
+                    the perfect gift to bring joy to someone’s (or your) day.The
+                    common sunflower has a green erect stem covered in coarse
+                    hairs, growing on average around 2m tall. The leaves are
+                    broad, with serrated edges, and are alternately arranged on
+                    the stem. The ‘flower’ of the common sunflower is actually a
+                    pseudanthium, or flowerhead, made up of many small flowers.
+                    The outer yellow ‘petals’ on the flowerhead are known as ray
+                    flowers and are made up of multiple petals fused together.
+                    Ray petals are usually yellow but can sometimes be red or
+                    orange. The black-brown flowers in the centre of the head,
+                    called disk flowers, grow in a spiral formation, and mature
+                    into sunflower seeds over time.Sunflower seeds are processed
+                    to create sunflower oil, a cooking oil that is both cheap to
+                    produce and high in unsaturated fats.Sunflower seeds are
+                    eaten both raw and roasted as a snack. They can also be
+                    processed to create sunflower butter, an alternative to
+                    peanut butter.Sunflower oil can be processed into
+                    margarine.Some Native American peoples use ground sunflower
+                    seeds to make bread-like products.Did you know? Sunflower
+                    petals are edible, but they aren't widely eaten due to their
+                    flavour.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="card relative group block p-2 h-full w-full"
+          >
+            <div class="card-main">
+              <div class="card-inner">
+                <div>
+                  <h3>America</h3>
+                  <p>
+                    Daisies are simple yet sophisticated and are some of the
+                    most beautiful flowers in the floral world.Daisy plants
+                    often grow to about 2 to 3 feet (61 to 91 centimeters) tall.
+                    The flowers grow on long stalks. Two types of flower make up
+                    each flower head. Ray flowers are what people call petals.
+                    The ray flowers may be long or short. Tiny disk flowers make
+                    up the center. The center may be flat or rounded. Depending
+                    on the type of daisy, the flower heads are from 1 to 4
+                    inches (2.5 to 10 centimeters) wide.Oxeye and Shasta daisies
+                    have a ring of white ray flowers around a bright yellow
+                    center. The ray flowers of the English daisy may be white,
+                    purple, pink, or red.With its soft, pearly white petals
+                    radiating from a golden center, the Shasta daisy is a
+                    timeless classic. Not is it only one of the largest daisies,
+                    but it is also one of the easiest to grow and care for.
+                    Plus, you can enjoy its hearty blooms season after
+                    season.The sweet simplicity and genuine beauty of the daisy
+                    have made the flower an international emblem of innocence
+                    and purity. Its fresh, crisp appearance has come to
+                    symbolize new beginnings, and its bright, spirit-lifting
+                    colors are known to spread happiness like wildfire. It’s for
+                    these reasons that daisies make the perfect gifts and
+                    decorations for celebrating all of life’s biggest milestone
+                    events.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="card relative group block p-2 h-full w-full"
+          >
+            <div class="card-main">
+              <div class="card-inner">
+                <div>
+                  <h3>Stanford</h3>
+                  <p>
+                    If you're a hiker in search of adventure and stunning
+                    vistas, look no further than Stanford. With its picturesque
+                    trails and diverse terrain, Stanford is the perfect base for
+                    your next hiking excursion. Whether you're a seasoned
+                    explorer or just starting out, BestTrip's hiking guides and
+                    gear will help you explore Stanford's breathtaking
+                    landscapes. From the towering redwoods of Muir Woods
+                    National Monument to the picturesque vistas of La Loma
+                    Trail, Stanford offers a world of outdoor experiences
+                    waiting to be discovered. Join us on your next hiking
+                    adventure and let Stanford's natural beauty transport you to
+                    a place of wonder and enchantment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="card relative group block p-2 h-full w-full"
+          >
+            <div class="card-main">
+              <div class="card-inner">
+                <div>
+                  <h3>California</h3>
+                  <p>
+                    BesTrip is a popular vacation rental platform in California,
+                    where hosts offer unique and luxurious accommodations to
+                    travelers. Whether you're looking for a cozy bed and
+                    breakfast in San Francisco, a beachfront villa in Santa
+                    Monica, or a luxury cabin in the mountains, BesTrip has
+                    something for everyone. From modern apartments to historic
+                    mansions, BesTrip offers a variety of properties that cater
+                    to different preferences and budgets. With its user-friendly
+                    interface and large selection, BesTrip makes it easy to find
+                    the perfect vacation rental for your next trip to
+                    California. So why wait? Book your dream vacation rental
+                    with BesTrip today and experience the beauty and charm of
+                    California from the comfort of your own home.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-    <script>
-      import gsap from "https://cdn.skypack.dev/gsap@3.12.0";
-      import ScrollTrigger from "https://cdn.skypack.dev/gsap@3.12.0/ScrollTrigger";
-      // If you wanted to use <button> for the interactions.
-      // const INDICATORS = document.querySelector('.track__indicators')
-
-      // const SHIFT = event => {
-      //   if (event.target.tagName === 'BUTTON') {
-      //     const TARGET = [...event.target.parentNode.children].indexOf(event.target)
-      //     const LI = document.querySelector(`li:nth-of-type(${TARGET + 1})`)
-      //     LI.scrollIntoView({
-      //       behavior: 'smooth',
-      //       inline: 'center'
-      //     })
-      //   }
-      // }
-
-      // INDICATORS.addEventListener('click', SHIFT)
-      if (!CSS.supports("animation-timeline: scroll()")) {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.set(".track__indicators", { aspectRatio: "7 / 1" });
-
-        const INDICATORS = document.querySelectorAll(".indicator");
-        const ARTICLES = document.querySelectorAll("li");
-        INDICATORS.forEach((indicator, index) => {
-          // Here need to animate the indicator based on the position of the card
-          gsap.to(indicator, {
-            flex: 3,
-            repeat: 1,
-            yoyo: true,
-            scrollTrigger: {
-              scrub: true,
-              horizontal: true,
-              trigger: ARTICLES[index],
-              scroller: "ul",
-              start: "right right",
-              end: "left left",
-              snap: [0, 1],
-            },
-          });
-        });
-      }
-    </script>
-
+    </section>
     <style>
-      footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
+      body {
+        background-color: #2a2a2a;
+      }
+      .grid {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+      }
+      .grid > li {
+        width: calc(100% / 3 - 30px);
+        margin: 0px 15px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        border-radius: 15px;
+      }
+      .filters {
+        margin-top: 40px;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .grid li img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .filters button {
+        padding: 10px 25px;
+        margin: 0px 5px;
+        background-color: #121212;
+        border: none;
+        border-radius: 10px;
+        transition: 150ms;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 700;
+        position: relative;
+        outline: none;
+        cursor: pointer;
+      }
+      .filters button.is-checked {
+        background-color: #fff;
+        color: #121212;
+      }
+      .element-item > div {
+        padding: 20px 15px;
+        background-color: #121212;
+        color: #dddddd;
+      }
+      .element-item p {
+        font-size: 18px;
+        line-height: 24px;
+        font-family: "Lato", sans-serif;
+      }
+
+      @media (max-width: 767px) {
+        .filters button {
+          padding: 5px 10px;
+          margin: 5px;
+        }
+        .grid > li {
+          width: calc(100% - 30px);
+        }
+        .element-item p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100svh;
+        overflow-x: hidden;
+        background-color: #000;
+        color: #e7e7e7;
+
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+      }
+      section {
+        height: 100%;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 710px;
+      }
+      h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #d3d1d1;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        color: #d3d1d1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      a.zoomed p {
+        -webkit-line-clamp: unset;
+      }
+      a.zoomed .card-inner {
+        overflow: auto;
+      }
+      a.opacity-0 {
+        opacity: 0;
+      }
+      .overflow {
+        overflow: hidden;
+      }
+      .overflow .background {
+        opacity: 0 !important;
+      }
+
+      .background {
+        background-color: #2c5c7f;
+        border-radius: 20px;
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+      }
+      .card-wraper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: space-between;
+      }
+      a.card {
+        text-decoration: none;
+        height: 100%;
         width: 100%;
-        background-color: #69916963;
-        text-align: center;
+        display: inline-block;
+        position: relative;
         padding: 10px;
       }
-    </style>
+      .card-main {
+        border: 1px solid #1a5582;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #000;
+      }
+      .card:hover .card-main {
+        position: relative;
+        z-index: 20;
+      }
+      .card-inner {
+        position: relative;
+        z-index: 50;
+        height: 100%;
+      }
+      .card-inner div {
+        height: 100%;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
 
-    <footer>
-      <p style="color: rgba(208, 223, 223, 0.808)">
-        &copy; 2024 BsTrip. All rights reserved.
-      </p>
-    </footer>
+      @media screen and (max-width: 1199px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        body {
+          height: 100%;
+        }
+        .container {
+          max-width: 720px;
+          display: block;
+        }
+        .card-wraper {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .container {
+          max-width: 520px;
+        }
+        .card-wraper {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .card-main {
+          padding: 30px 20px;
+        }
+        a.card {
+          padding: 6px;
+        }
+      }
+
+      @media screen and (max-width: 575px) {
+        .container {
+          max-width: 100%;
+        }
+        .card-wraper {
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        .card-main {
+          padding: 40px;
+        }
+        a.card {
+          padding: 10px;
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var cards = document.querySelectorAll("a.card");
+        var background = document.querySelector(".background");
+
+        // Store the index of the last hovered card
+        var lastHoveredCardIndex =
+          localStorage.getItem("lastHoveredCardIndex") || 0;
+
+        // Set the background to the last hovered card by default
+        var cardRect = cards[lastHoveredCardIndex].getBoundingClientRect();
+        var x = cardRect.left + window.scrollX + cardRect.width / 2;
+        var y = cardRect.top + window.scrollY + cardRect.height / 2;
+
+        background.style.width = cardRect.width + "px";
+        background.style.height = cardRect.height + "px";
+        background.style.transform = `translate(${x - cardRect.width / 2}px, ${
+          y - cardRect.height / 2
+        }px)`;
+        background.style.opacity = "0"; // Set opacity to 0 when the page loads
+
+        cards.forEach(function (card, index) {
+          card.addEventListener("mouseenter", function (e) {
+            // If the card is zoomed in, return early to prevent the hover effect
+            if (card.classList.contains("zoomed")) {
+              return;
+            }
+
+            var rect = card.getBoundingClientRect();
+            x = rect.left + window.scrollX + rect.width / 2;
+            y = rect.top + window.scrollY + rect.height / 2;
+
+            background.style.width = rect.width + "px";
+            background.style.height = rect.height + "px";
+            background.style.transform = `translate(${x - rect.width / 2}px, ${
+              y - rect.height / 2
+            }px)`;
+            background.style.opacity = "1"; // Change opacity to 1 when a card is hovered over
+            background.style.top = "0%";
+            background.style.left = "0%";
+            background.style.transformOrigin = "center";
+            // Store the index of the hovered card
+            localStorage.setItem("lastHoveredCardIndex", index);
+          });
+
+          card.addEventListener("mouseleave", function (e) {
+            background.style.opacity = "0"; // Change opacity back to 0 when the mouse leaves a card
+            // Reset the background size when the mouse leaves the card
+            background.style.width = "0px";
+            background.style.height = "0px";
+          });
+
+          card.addEventListener("click", function () {
+            if (card.classList.contains("zoomed")) {
+              card.classList.remove("zoomed");
+              card.style.transform = "none";
+              card.style.position = "relative";
+              card.style.width = "unset";
+              card.style.height = "unset";
+              card.style.top = "0";
+              card.style.left = "0";
+              card.style.zIndex = "0";
+
+              // Remove the 'overflow' class from the body when a card is unzoomed
+              document.body.classList.remove("overflow");
+
+              // Remove the 'opacity-0' class from other <a> tags when a card is unzoomed
+              cards.forEach(function (otherCard) {
+                if (otherCard !== card) {
+                  otherCard.classList.remove("opacity-0");
+                }
+              });
+            } else {
+              card.classList.add("zoomed");
+              card.style.position = "fixed";
+              card.style.top = "50%";
+              card.style.left = "50%";
+              requestAnimationFrame(function () {
+                card.style.transform = "translate(-50%, -50%)";
+              });
+              card.style.width = "90vw";
+              card.style.height = "90vh";
+              card.style.zIndex = "1000";
+
+              // Add the 'overflow' class to the body when a card is zoomed
+              document.body.classList.add("overflow");
+
+              // Add the 'opacity-0' class to other <a> tags when a card is zoomed
+              cards.forEach(function (otherCard) {
+                if (otherCard !== card) {
+                  otherCard.classList.add("opacity-0");
+                }
+              });
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
